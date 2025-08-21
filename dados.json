@@ -3,31 +3,31 @@
         "deposito": 1138,
         "saque": 1069,
         "total": 69,
-        "primeiro_negativo": "20\/08\/2025 05:14"
+        "primeiro_negativo": null
     },
     "ArtDrk": {
         "deposito": 4432,
-        "saque": 3621,
-        "total": 811,
-        "primeiro_negativo": "20\/08\/2025 01:29"
+        "saque": 3611,
+        "total": 821,
+        "primeiro_negativo": null
     },
     "Avalesa": {
         "deposito": 1410,
         "saque": 1463,
         "total": -53,
-        "primeiro_negativo": "20\/08\/2025 01:28"
+        "primeiro_negativo": "18\/08\/2025 03:23"
     },
     "Xand1NHoglund": {
         "deposito": 1077,
         "saque": 1039,
         "total": 38,
-        "primeiro_negativo": "20\/08\/2025 00:53"
+        "primeiro_negativo": null
     },
     "Sk00r": {
-        "deposito": 549,
+        "deposito": 539,
         "saque": 453,
-        "total": 96,
-        "primeiro_negativo": "19\/08\/2025 02:52"
+        "total": 86,
+        "primeiro_negativo": null
     },
     "Hayrman": {
         "deposito": 685,
@@ -51,13 +51,13 @@
         "deposito": 380,
         "saque": 235,
         "total": 145,
-        "primeiro_negativo": "18\/08\/2025 03:19"
+        "primeiro_negativo": null
     },
     "taigona": {
         "deposito": 309,
         "saque": 277,
         "total": 32,
-        "primeiro_negativo": "15\/08\/2025 21:14"
+        "primeiro_negativo": null
     },
     "EdCigano": {
         "deposito": 94,

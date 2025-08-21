@@ -2401,25 +2401,11 @@
         "quantidade": 10
     },
     {
-        "ts": 1752880320,
-        "data_str": "19\/07\/2025 01:12",
-        "jogador": "Sk00r",
-        "motivo": "dep\u00f3sito",
-        "quantidade": 10
-    },
-    {
         "ts": 1752880200,
         "data_str": "19\/07\/2025 01:10",
         "jogador": "LordCalopsita",
         "motivo": "dep\u00f3sito",
         "quantidade": 10
-    },
-    {
-        "ts": 1752877980,
-        "data_str": "19\/07\/2025 00:33",
-        "jogador": "ArtDrk",
-        "motivo": "saque",
-        "quantidade": -10
     },
     {
         "ts": 1752877980,

@@ -366,6 +366,11 @@ if ($filtrarHistorico && ($data_inicio_historico || $data_fim_historico || $filt
     }
 }
 
+// ORDENAR OS DADOS FILTRADOS POR NOME DO JOGADOR (ALFABÉTICO)
+if (!empty($dadosFiltrados)) {
+    ksort($dadosFiltrados); // Ordena pelo índice (nome do jogador) em ordem alfabética
+}
+
 // Limpar a sessão após uso (apenas se foi um redirecionamento)
 if ($processamentoConcluido) {
     unset($_SESSION['processamento_concluido']);

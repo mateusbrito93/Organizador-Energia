@@ -1,7 +1,6 @@
 <?php
-//require __DIR__ . '/vendor/autoload.php'; // PhpSpreadsheet
-//use PhpOffice\PhpSpreadsheet\Spreadsheet;
-//use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+// Iniciar sessão NO TOPO do arquivo, antes de qualquer output
+session_start();
 
 function limpar($v)
 {
@@ -55,8 +54,24 @@ if (file_exists($arquivoDados)) {
     $dadosSalvos = [];
 }
 
-if ($linhas_raw !== '') {
+// Inicializar dados brutos existentes
+$arquivoDadosBrutos = "dados_brutos.json";
+$dadosBrutosExistentes = [];
+
+if (file_exists($arquivoDadosBrutos)) {
+    $dadosBrutosExistentes = json_decode(file_get_contents($arquivoDadosBrutos), true);
+}
+
+// Verificar se é um redirecionamento após processamento
+$processamentoConcluido = isset($_SESSION['processamento_concluido']) ? $_SESSION['processamento_concluido'] : false;
+$logsDuplicados = isset($_SESSION['logs_duplicados']) ? $_SESSION['logs_duplicados'] : [];
+$logsProcessados = isset($_SESSION['logs_processados']) ? $_SESSION['logs_processados'] : 0;
+
+// Processar apenas se for um novo envio, não um redirecionamento
+if ($linhas_raw !== '' && isset($_POST['processar']) && !$processamentoConcluido) {
     $linhas = explode("\n", $linhas_raw);
+    $logsDuplicados = [];
+    $logsProcessados = 0;
 
     foreach ($linhas as $linha) {
         $linha = trim($linha);
@@ -85,14 +100,39 @@ if ($linhas_raw !== '') {
         if ($ts === false)
             continue;
 
-        $rows[] = [
+        // Verificar duplicidade
+        $duplicado = false;
+        if (!empty($dadosBrutosExistentes)) {
+            foreach ($dadosBrutosExistentes as $registroExistente) {
+                if (
+                    $registroExistente['data_str'] === $dataStr &&
+                    $registroExistente['jogador'] === $jogador &&
+                    $registroExistente['motivo'] === $motivo &&
+                    $registroExistente['quantidade'] == $quantidade
+                ) {
+                    $duplicado = true;
+                    $logsDuplicados[] = "$dataStr - $jogador - $motivo - $quantidade";
+                    break;
+                }
+            }
+        }
+
+        if ($duplicado) {
+            continue; // Pula registros duplicados
+        }
+
+        // Criar array temporário para este registro
+        $novoRegistro = [
             'ts' => $ts,
             'data_str' => $dataStr,
             'jogador' => $jogador,
             'motivo' => $motivo,
             'quantidade' => $quantidade
         ];
+
+        $rows[] = $novoRegistro;
         $players[$jogador] = true;
+        $logsProcessados++;
 
         // Processar para dados salvos
         if (!isset($dadosSalvos[$jogador])) {
@@ -100,7 +140,7 @@ if ($linhas_raw !== '') {
                 "deposito" => 0,
                 "saque" => 0,
                 "total" => 0,
-                "primeiro_negativo" => null // chave para armazenar a data do primeiro negativo
+                "primeiro_negativo" => null
             ];
         }
 
@@ -108,20 +148,37 @@ if ($linhas_raw !== '') {
             $dadosSalvos[$jogador]["deposito"] += $quantidade;
             $dadosSalvos[$jogador]["total"] += $quantidade;
         } elseif ($motivo === "saque") {
-            $dadosSalvos[$jogador]["saque"] += abs($quantidade); // Converte negativo para positivo
-            $dadosSalvos[$jogador]["total"] += $quantidade; // Já que $quantidade é negativo, soma negativo = subtrai
+            $dadosSalvos[$jogador]["saque"] += abs($quantidade);
+            $dadosSalvos[$jogador]["total"] += $quantidade;
         }
 
         // Verificar se ficou negativo e registrar a data
         if ($dadosSalvos[$jogador]["total"] < 0 && $dadosSalvos[$jogador]["primeiro_negativo"] === null) {
             $dadosSalvos[$jogador]["primeiro_negativo"] = $dataStr;
         }
+
+        // Adicionar aos dados brutos existentes para verificação de duplicidade nos próximos registros
+        $dadosBrutosExistentes[] = $novoRegistro;
     }
 
     // Salvar dados no arquivo JSON
     file_put_contents($arquivoDados, json_encode($dadosSalvos, JSON_PRETTY_PRINT));
 
-    // --- aplica filtros ---
+    // Salvar dados brutos para filtros futuros (apenas os não duplicados)
+    file_put_contents($arquivoDadosBrutos, json_encode($dadosBrutosExistentes, JSON_PRETTY_PRINT));
+
+    // Armazenar mensagens na sessão para redirecionamento
+    $_SESSION['processamento_concluido'] = true;
+    $_SESSION['logs_duplicados'] = $logsDuplicados;
+    $_SESSION['logs_processados'] = $logsProcessados;
+
+    // Redirecionar para evitar reenvio do formulário
+    header("Location: " . $_SERVER['PHP_SELF']);
+    exit();
+}
+
+// --- aplica filtros --- (apenas se não for redirecionamento)
+if (!$processamentoConcluido && $linhas_raw !== '') {
     $ts_ini = $data_inicio ? strtotime($data_inicio . " 00:00:00") : null;
     $ts_fim = $data_fim ? strtotime($data_fim . " 23:59:59") : null;
     $usa_players = count($sel_players) > 0;
@@ -146,31 +203,8 @@ if ($linhas_raw !== '') {
             $resultado[$j]['total'] += $r['quantidade']; // Já que $r['quantidade'] é negativo, soma negativo = subtrai
         }
     }
-
-    // Exporta Excel (com filtros aplicados)
-    /*if (isset($_POST['exportar']) && !empty($resultado)) {
-        $spreadsheet = new Spreadsheet();
-        $sheet = $spreadsheet->getActiveSheet();
-        $sheet->setCellValue('A1', 'Jogador');
-        $sheet->setCellValue('B1', 'Depósitos');
-        $sheet->setCellValue('C1', 'Saques');
-        $sheet->setCellValue('D1', 'Total');
-
-        $i = 2;
-        foreach ($resultado as $jogador => $d) {
-            $sheet->setCellValue("A$i", $jogador);
-            $sheet->setCellValue("B$i", $d['deposito']);
-            $sheet->setCellValue("C$i", $d['saque']);
-            $sheet->setCellValue("D$i", $d['total']);
-            $i++;
-        }
-        header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-        header('Content-Disposition: attachment;filename="resultado_filtrado.xlsx"');
-        header('Cache-Control: max-age=0');
-        (new Xlsx($spreadsheet))->save('php://output');
-       exit;
-    }*/
 }
+
 // Select Múltiplo
 $players_list = array_keys($players);
 sort($players_list);
@@ -239,19 +273,12 @@ if ($filtrarHistorico && ($data_inicio_historico || $data_fim_historico || $filt
     }
 }
 
-// Salvar dados brutos para filtros futuros
-$arquivoDadosBrutos = "dados_brutos.json";
-$dadosBrutosExistentes = [];
-
-if (file_exists($arquivoDadosBrutos)) {
-    $dadosBrutosExistentes = json_decode(file_get_contents($arquivoDadosBrutos), true);
+// Limpar a sessão após uso (apenas se foi um redirecionamento)
+if ($processamentoConcluido) {
+    unset($_SESSION['processamento_concluido']);
+    unset($_SESSION['logs_duplicados']);
+    unset($_SESSION['logs_processados']);
 }
-
-foreach ($rows as $r) {
-    $dadosBrutosExistentes[] = $r;
-}
-
-file_put_contents($arquivoDadosBrutos, json_encode($dadosBrutosExistentes, JSON_PRETTY_PRINT));
 ?>
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -454,101 +481,354 @@ file_put_contents($arquivoDadosBrutos, json_encode($dadosBrutosExistentes, JSON_
             margin-top: 15px;
             border-left: 4px solid #cc0000;
         }
+
+        .alert-sucesso {
+            background: #4caf50;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #2e7d32;
+        }
+
+        .alert-duplicado {
+            background: #ff9800;
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border-left: 4px solid #f57c00;
+        }
+
+        .alert-duplicado ul,
+        .alert-sucesso ul {
+            margin: 10px 0;
+            padding-left: 20px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .alert-duplicado li,
+        .alert-sucesso li {
+            margin: 5px 0;
+            font-family: monospace;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 5px;
+            border-radius: 4px;
+        }
     </style>
 </head>
 
 <body>
     <h2>📊 Organizador de Energia</h2>
 
-    <form method="post" class="grid">
-        <div class="panel">
-            <label for="log">Cole aqui o LOG (CSV, ponto-e-vírgula, tabulação ou múltiplos espaços):</label>
-            <textarea id="log" name="log"><?= htmlspecialchars($linhas_raw) ?></textarea>
-            <div class="actions">
-                <button type="submit" name="processar" value="1">Processar Dados</button>
-                <?php if (!empty($resultado)): ?>
-                    <!--<button type="submit" name="exportar" value="1">⬇ Exportar Excel</button>-->
-                <?php endif; ?>
+    <!-- Mostrar alerta de duplicidades se houver (após redirecionamento) -->
+    <?php if ($processamentoConcluido && !empty($logsDuplicados)): ?>
+        <div class="alert-duplicado">
+            <strong>⚠️ LOGS DUPLICADOS ENCONTRADOS:</strong>
+            <p>Foram encontrados <?= count($logsDuplicados) ?> registros duplicados que não foram processados:</p>
+            <ul>
+                <?php foreach ($logsDuplicados as $logDuplicado): ?>
+                    <li><?= htmlspecialchars($logDuplicado) ?></li>
+                <?php endforeach; ?>
+            </ul>
+            <p><strong><?= $logsProcessados ?> registros novos foram processados com sucesso.</strong></p>
+            </div>
+        <?php elseif ($processamentoConcluido): ?>
+            <div class="alert-sucesso">
+                <strong>✅ PROCESSAMENTO CONCLUÍDO!</strong>
+                <p><?= $logsProcessados ?> registros foram processados com sucesso.</p>
+            </div>
+        <?php endif; ?>
+
+        <form method="post" class="grid">
+            <div class="panel">
+                <label for="log">Cole aqui o LOG (CSV, ponto-e-vírgula, tabulação ou múltiplos espaços):</label>
+                <textarea id="log"
+                    name="log"><?= $processamentoConcluido ? '' : htmlspecialchars($linhas_raw) ?></textarea>
+                <div class="actions">
+                    <button type="submit" name="processar" value="1">Processar Dados</button>
+                    <?php if (!empty($resultado)): ?>
+                        <!--<button type="submit" name="exportar" value="1">⬇ Exportar Excel</button>-->
+                    <?php endif; ?>
+                </div>
+            </div>
+        </form><br>
+
+        <!-- Abas para alternar entre dados processados e histórico completo -->
+        <div class="tabs">
+            <div class="tab <?= !empty($resultado) ? 'active' : '' ?>" onclick="showTab('resultado')">Resultado do
+                Processamento</div>
+            <div class="tab <?= empty($resultado) ? 'active' : '' ?>" onclick="showTab('historico')">Histórico Completo
             </div>
         </div>
-        </div>
-    </form><br>
 
-    <!-- Abas para alternar entre dados processados e histórico completo -->
-    <div class="tabs">
-        <div class="tab <?= !empty($resultado) ? 'active' : '' ?>" onclick="showTab('resultado')">Resultado do
-            Processamento</div>
-        <div class="tab <?= empty($resultado) ? 'active' : '' ?>" onclick="showTab('historico')">Histórico Completo
-        </div>
-    </div>
+        <!-- Conteúdo da aba de Resultado -->
+        <div id="tab-resultado" class="tab-content <?= !empty($resultado) ? 'active' : '' ?>">
+            <?php if (!empty($resultado)): ?>
+                <div class="panel">
+                    <h3>Resultado do Processamento (com filtros aplicados)</h3>
 
-    <!-- Conteúdo da aba de Resultado -->
-    <div id="tab-resultado" class="tab-content <?= !empty($resultado) ? 'active' : '' ?>">
-        <?php if (!empty($resultado)): ?>
-            <div class="panel">
-                <h3>Resultado do Processamento (com filtros aplicados)</h3>
+                    <div class="toolbar">
+                        <label>🔽 Ordenar por:
+                            <select id="ordenarSelect" onchange="ordenarTabela('resultadoTabela')">
+                                <option value="0">Jogador</option>
+                                <option value="1">Depósitos</option>
+                                <option value="2">Saques</option>
+                                <option value="3">Total</option>
+                            </select>
+                        </label>
 
-                <div class="toolbar">
-                    <label>🔽 Ordenar por:
-                        <select id="ordenarSelect" onchange="ordenarTabela('resultadoTabela')">
-                            <option value="0">Jogador</option>
-                            <option value="1">Depósitos</option>
-                            <option value="2">Saques</option>
-                            <option value="3">Total</option>
-                        </select>
-                    </label>
+                        <label>🔍 Buscar Jogador:
+                            <input type="text" id="filtroJogador" onkeyup="filtrarTabela('resultadoTabela')"
+                                placeholder="Digite o nome...">
+                        </label>
+                    </div>
 
-                    <label>🔍 Buscar Jogador:
-                        <input type="text" id="filtroJogador" onkeyup="filtrarTabela('resultadoTabela')"
-                            placeholder="Digite o nome...">
-                    </label>
+                    <table id="resultadoTabela">
+                        <thead>
+                            <tr>
+                                <th>Jogador</th>
+                                <th>Depósitos</th>
+                                <th>Saques</th>
+                                <th>Total</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <?php foreach ($resultado as $jogador => $dados): ?>
+                                <tr>
+                                    <td><?= htmlspecialchars($jogador) ?></td>
+                                    <td><?= $dados['deposito'] ?></td>
+                                    <td><?= $dados['saque'] ?></td>
+                                    <td><?= $dados['total'] ?></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
                 </div>
 
-                <table id="resultadoTabela">
-                    <thead>
-                        <tr>
-                            <th>Jogador</th>
-                            <th>Depósitos</th>
-                            <th>Saques</th>
-                            <th>Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($resultado as $jogador => $dados): ?>
+                <div class="charts">
+                    <div class="panel"><canvas id="barChart"></canvas></div>
+                    <div class="panel"><canvas id="pieChart"></canvas></div>
+                </div>
+
+                <script>
+                    const labels = <?= json_encode(array_keys($resultado)) ?>;
+                    const deposito = <?= json_encode(array_column($resultado, 'deposito')) ?>;
+                    const saque = <?= json_encode(array_column($resultado, 'saque')) ?>;
+                    const totais = <?= json_encode(array_column($resultado, 'total')) ?>;
+
+                    new Chart(document.getElementById('barChart'), {
+                        type: 'bar',
+                        data: {
+                            labels,
+                            datasets: [
+                                { label: 'Depósitos', data: deposito, backgroundColor: '#4caf50' },
+                                { label: 'Saques', data: saque, backgroundColor: '#f44336' }
+                            ]
+                        },
+                        options: {
+                            responsive: true,
+                            plugins: { legend: { labels: { color: "#fff" } } },
+                            scales: {
+                                x: { ticks: { color: "#fff" } },
+                                y: { ticks: { color: "#fff" } }
+                            }
+                        }
+                    });
+
+                    new Chart(document.getElementById('pieChart'), {
+                        type: 'pie',
+                        data: {
+                            labels,
+                            datasets: [{ data: totais, backgroundColor: ['#0078d7', '#00bcd4', '#4caf50', '#f44336', '#ff9800', '#9c27b0', '#03a9f4', '#8bc34a', '#e91e63', '#795548'] }]
+                        },
+                        options: { responsive: true, plugins: { legend: { labels: { color: "#fff" } } } }
+                    });
+                </script>
+            <?php else: ?>
+                <div class="panel">
+                    <h3>Nenhum dado processado ainda</h3>
+                    <p>Cole um LOG acima e clique em "Processar Dados" para ver os resultados.</p>
+                </div>
+            <?php endif; ?>
+        </div>
+
+        <!-- Conteúdo da aba de Histórico -->
+        <div id="tab-historico" class="tab-content <?= empty($resultado) ? 'active' : '' ?>">
+            <form method="post">
+                <div class="panel">
+                    <h3>Histórico Completo (todos os dados salvos)</h3>
+
+                    <!-- Filtros para o histórico -->
+                    <div class="panel grid"
+                        style="grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); align-items:end; margin-bottom: 20px;">
+                        <div>
+                            <label>Data inicial</label>
+                            <input type="date" name="data_inicio_historico"
+                                value="<?= htmlspecialchars($data_inicio_historico) ?>">
+                        </div>
+                        <div>
+                            <label>Data final</label>
+                            <input type="date" name="data_fim_historico"
+                                value="<?= htmlspecialchars($data_fim_historico) ?>">
+                        </div>
+                        <div>
+                            <label>Filtrar por Jogador</label>
+                            <input type="text" name="filtro_jogador_historico"
+                                value="<?= htmlspecialchars($filtro_jogador_historico) ?>"
+                                placeholder="Digite parte do nome..." style="width: 100%;">
+                        </div>
+                        <div class="actions">
+                            <button type="submit" name="aplicar_filtro_historico" value="1">Aplicar Filtro</button>
+                            <?php if ($filtrarHistorico): ?>
+                                <button type="button" onclick="limparFiltroHistorico()">Limpar Filtro</button>
+                            <?php endif; ?>
+                        </div>
+                    </div>
+
+                    <?php if ($filtrarHistorico): ?>
+                        <div style="background: #2c2c2c; padding: 10px; border-radius: 8px; margin-bottom: 15px;">
+                            <strong>Filtro aplicado:</strong>
+                            <?php if ($data_inicio_historico): ?>De:
+                                <?= htmlspecialchars($data_inicio_historico) ?>     <?php endif; ?>
+                            <?php if ($data_fim_historico): ?> Até:
+                                <?= htmlspecialchars($data_fim_historico) ?>     <?php endif; ?>
+                            <?php if ($filtro_jogador_historico): ?> | Jogador:
+                                <?= htmlspecialchars($filtro_jogador_historico) ?>     <?php endif; ?>
+                        </div>
+                    <?php endif; ?>
+
+                    <div class="toolbar">
+                        <label>🔽 Ordenar por:
+                            <select id="ordenarSelectHistorico" onchange="ordenarTabela('historicoTabela')">
+                                <option value="0">Jogador</option>
+                                <option value="1">Depósitos</option>
+                                <option value="2">Saques</option>
+                                <option value="3">Total</option>
+                            </select>
+                        </label>
+
+                        <label>🔍 Buscar Jogador:
+                            <input type="text" id="filtroJogadorHistorico" onkeyup="filtrarTabela('historicoTabela')"
+                                placeholder="Digite o nome...">
+                        </label>
+                    </div>
+
+                    <table id="historicoTabela">
+                        <thead>
                             <tr>
-                                <td><?= htmlspecialchars($jogador) ?></td>
-                                <td><?= $dados['deposito'] ?></td>
-                                <td><?= $dados['saque'] ?></td>
-                                <td><?= $dados['total'] ?></td>
+                                <th>Jogador</th>
+                                <th>Depósitos</th>
+                                <th>Saques</th>
+                                <th>Total</th>
                             </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
-            </div>
+                        </thead>
+                        <tbody>
+                            <?php
+                            $totalGeralDepositos = 0;
+                            $totalGeralSaques = 0;
+                            $totalGeralTotal = 0;
+                            $jogadoresNegativos = [];
 
+                            foreach ($dadosFiltrados as $jogador => $dados):
+                                $totalGeralDepositos += $dados['deposito'];
+                                $totalGeralSaques += $dados['saque'];
+                                $totalGeralTotal += $dados['total'];
+
+                                // Verificar se o total é negativo
+                                $totalNegativo = $dados['total'] < 0;
+                                if ($totalNegativo) {
+                                    $jogadoresNegativos[] = $jogador;
+                                }
+                                ?>
+                                <tr class="<?= $totalNegativo ? 'total-negativo' : '' ?>">
+                                    <td><?= htmlspecialchars($jogador) ?></td>
+                                    <td><?= $dados['deposito'] ?></td>
+                                    <td><?= $dados['saque'] ?></td>
+                                    <td><?= $dados['total'] ?></td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                        <tfoot>
+                            <tr style="background-color: #2c2c2c; font-weight: bold;">
+                                <td>TOTAL GERAL</td>
+                                <td><?= $totalGeralDepositos ?></td>
+                                <td><?= $totalGeralSaques ?></td>
+                                <td><?= $totalGeralTotal ?></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+
+                    <?php if (!empty($jogadoresNegativos)): ?>
+                        <div
+                            style="background: #ff4444; color: white; padding: 10px; border-radius: 8px; margin-top: 15px;">
+                            <strong>⚠️ ALERTA: Jogadores com saldo negativo:</strong>
+                            <ul>
+                                <?php foreach ($jogadoresNegativos as $jogador):
+                                    // Usar $dadosSalvos em vez de $dadosFiltrados para pegar o primeiro_negativo
+                                    $primeiroNegativo = $dadosSalvos[$jogador]["primeiro_negativo"] ?? null;
+                                    $diasNegativo = null;
+
+                                    if ($primeiroNegativo) {
+                                        $dataPrimeiroNegativo = to_ts($primeiroNegativo);
+                                        $dias = floor((time() - $dataPrimeiroNegativo) / (60 * 60 * 24));
+                                        $diasNegativo = $dias . " dia" . ($dias != 1 ? "s" : "");
+                                    }
+                                    ?>
+                                    <li>
+                                        <?= htmlspecialchars($jogador) ?>
+                                        <?php if ($primeiroNegativo): ?>
+                                            - Negativo desde <?= htmlspecialchars($primeiroNegativo) ?>
+                                            (<?= $diasNegativo ?>)
+                                        <?php else: ?>
+                                            - Data do primeiro negativo não registrada
+                                        <?php endif; ?>
+                                    </li>
+                                <?php endforeach; ?>
+                            </ul>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            </form>
+
+            <!-- Gráficos para o Histórico Completo -->
             <div class="charts">
-                <div class="panel"><canvas id="barChart"></canvas></div>
-                <div class="panel"><canvas id="pieChart"></canvas></div>
+                <div class="panel"><canvas id="barChartHistorico"></canvas></div>
+                <div class="panel"><canvas id="pieChartHistorico"></canvas></div>
             </div>
-
             <script>
-                const labels = <?= json_encode(array_keys($resultado)) ?>;
-                const deposito = <?= json_encode(array_column($resultado, 'deposito')) ?>;
-                const saque = <?= json_encode(array_column($resultado, 'saque')) ?>;
-                const totais = <?= json_encode(array_column($resultado, 'total')) ?>;
+                // Dados para os gráficos do histórico
+                const labelsHistorico = <?= json_encode(array_keys($dadosFiltrados)) ?>;
+                const depositoHistorico = <?= json_encode(array_column($dadosFiltrados, 'deposito')) ?>;
+                const saqueHistorico = <?= json_encode(array_column($dadosFiltrados, 'saque')) ?>;
+                const totaisHistorico = <?= json_encode(array_column($dadosFiltrados, 'total')) ?>;
 
-                new Chart(document.getElementById('barChart'), {
+                // Gráfico de barras para histórico
+                new Chart(document.getElementById('barChartHistorico'), {
                     type: 'bar',
                     data: {
-                        labels,
+                        labels: labelsHistorico,
                         datasets: [
-                            { label: 'Depósitos', data: deposito, backgroundColor: '#4caf50' },
-                            { label: 'Saques', data: saque, backgroundColor: '#f44336' }
+                            {
+                                label: 'Depósitos',
+                                data: depositoHistorico,
+                                backgroundColor: '#4caf50'
+                            },
+                            {
+                                label: 'Saques',
+                                data: saqueHistorico,
+                                backgroundColor: '#f44336'
+                            }
                         ]
                     },
                     options: {
                         responsive: true,
-                        plugins: { legend: { labels: { color: "#fff" } } },
+                        plugins: {
+                            legend: {
+                                labels: { color: "#fff" }
+                            }
+                        },
                         scales: {
                             x: { ticks: { color: "#fff" } },
                             y: { ticks: { color: "#fff" } }
@@ -556,321 +836,124 @@ file_put_contents($arquivoDadosBrutos, json_encode($dadosBrutosExistentes, JSON_
                     }
                 });
 
-                new Chart(document.getElementById('pieChart'), {
+                // Gráfico de pizza para histórico
+                new Chart(document.getElementById('pieChartHistorico'), {
                     type: 'pie',
                     data: {
-                        labels,
-                        datasets: [{ data: totais, backgroundColor: ['#0078d7', '#00bcd4', '#4caf50', '#f44336', '#ff9800', '#9c27b0', '#03a9f4', '#8bc34a', '#e91e63', '#795548'] }]
+                        labels: labelsHistorico,
+                        datasets: [{
+                            data: totaisHistorico,
+                            backgroundColor: [
+                                '#0078d7', '#00bcd4', '#4caf50', '#f44336', '#ff9800',
+                                '#9c27b0', '#03a9f4', '#8bc34a', '#e91e63', '#795548',
+                                '#607d8b', '#ff5722', '#009688', '#673ab7', '#3f51b5'
+                            ]
+                        }]
                     },
-                    options: { responsive: true, plugins: { legend: { labels: { color: "#fff" } } } }
-                });
-            </script>
-        <?php else: ?>
-            <div class="panel">
-                <h3>Nenhum dado processado ainda</h3>
-                <p>Cole um LOG acima e clique em "Processar Dados" para ver os resultados.</p>
-            </div>
-        <?php endif; ?>
-    </div>
-
-    <!-- Conteúdo da aba de Histórico -->
-    <div id="tab-historico" class="tab-content <?= empty($resultado) ? 'active' : '' ?>">
-        <form method="post">
-            <div class="panel">
-                <h3>Histórico Completo (todos os dados salvos)</h3>
-
-                <!-- Filtros para o histórico -->
-                <div class="panel grid"
-                    style="grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); align-items:end; margin-bottom: 20px;">
-                    <div>
-                        <label>Data inicial</label>
-                        <input type="date" name="data_inicio_historico"
-                            value="<?= htmlspecialchars($data_inicio_historico) ?>">
-                    </div>
-                    <div>
-                        <label>Data final</label>
-                        <input type="date" name="data_fim_historico"
-                            value="<?= htmlspecialchars($data_fim_historico) ?>">
-                    </div>
-                    <div>
-                        <label>Filtrar por Jogador</label>
-                        <input type="text" name="filtro_jogador_historico"
-                            value="<?= htmlspecialchars($filtro_jogador_historico) ?>"
-                            placeholder="Digite parte do nome..." style="width: 100%;">
-                    </div>
-                    <div class="actions">
-                        <button type="submit" name="aplicar_filtro_historico" value="1">Aplicar Filtro</button>
-                        <?php if ($filtrarHistorico): ?>
-                            <button type="button" onclick="limparFiltroHistorico()">Limpar Filtro</button>
-                        <?php endif; ?>
-                    </div>
-                </div>
-
-                <?php if ($filtrarHistorico): ?>
-                    <div style="background: #2c2c2c; padding: 10px; border-radius: 8px; margin-bottom: 15px;">
-                        <strong>Filtro aplicado:</strong>
-                        <?php if ($data_inicio_historico): ?>De:
-                            <?= htmlspecialchars($data_inicio_historico) ?>    <?php endif; ?>
-                        <?php if ($data_fim_historico): ?> Até: <?= htmlspecialchars($data_fim_historico) ?><?php endif; ?>
-                        <?php if ($filtro_jogador_historico): ?> | Jogador:
-                            <?= htmlspecialchars($filtro_jogador_historico) ?>    <?php endif; ?>
-                    </div>
-                <?php endif; ?>
-
-                <div class="toolbar">
-                    <label>🔽 Ordenar por:
-                        <select id="ordenarSelectHistorico" onchange="ordenarTabela('historicoTabela')">
-                            <option value="0">Jogador</option>
-                            <option value="1">Depósitos</option>
-                            <option value="2">Saques</option>
-                            <option value="3">Total</option>
-                        </select>
-                    </label>
-
-                    <label>🔍 Buscar Jogador:
-                        <input type="text" id="filtroJogadorHistorico" onkeyup="filtrarTabela('historicoTabela')"
-                            placeholder="Digite o nome...">
-                    </label>
-                </div>
-
-                <table id="historicoTabela">
-                    <thead>
-                        <tr>
-                            <th>Jogador</th>
-                            <th>Depósitos</th>
-                            <th>Saques</th>
-                            <th>Total</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        $totalGeralDepositos = 0;
-                        $totalGeralSaques = 0;
-                        $totalGeralTotal = 0;
-                        $jogadoresNegativos = [];
-
-                        foreach ($dadosFiltrados as $jogador => $dados):
-                            $totalGeralDepositos += $dados['deposito'];
-                            $totalGeralSaques += $dados['saque'];
-                            $totalGeralTotal += $dados['total'];
-
-                            // Verificar se o total é negativo
-                            $totalNegativo = $dados['total'] < 0;
-                            if ($totalNegativo) {
-                                $jogadoresNegativos[] = $jogador;
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                labels: { color: "#fff" }
                             }
-                            ?>
-                            <tr class="<?= $totalNegativo ? 'total-negativo' : '' ?>">
-                                <td><?= htmlspecialchars($jogador) ?></td>
-                                <td><?= $dados['deposito'] ?></td>
-                                <td><?= $dados['saque'] ?></td>
-                                <td><?= $dados['total'] ?></td>
-                            </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                    <tfoot>
-                        <tr style="background-color: #2c2c2c; font-weight: bold;">
-                            <td>TOTAL GERAL</td>
-                            <td><?= $totalGeralDepositos ?></td>
-                            <td><?= $totalGeralSaques ?></td>
-                            <td><?= $totalGeralTotal ?></td>
-                        </tr>
-                    </tfoot>
-                </table>
+                        }
+                    }
+                });
 
-                <?php if (!empty($jogadoresNegativos)): ?>
-                    <div style="background: #ff4444; color: white; padding: 10px; border-radius: 8px; margin-top: 15px;">
-                        <strong>⚠️ ALERTA: Jogadores com saldo negativo:</strong>
-                        <ul>
-                            <?php foreach ($jogadoresNegativos as $jogador):
-                                // Usar $dadosSalvos em vez de $dadosFiltrados para pegar o primeiro_negativo
-                                $primeiroNegativo = $dadosSalvos[$jogador]["primeiro_negativo"] ?? null;
-                                $diasNegativo = null;
-
-                                if ($primeiroNegativo) {
-                                    $dataPrimeiroNegativo = to_ts($primeiroNegativo);
-                                    $dias = floor((time() - $dataPrimeiroNegativo) / (60 * 60 * 24));
-                                    $diasNegativo = $dias . " dia" . ($dias != 1 ? "s" : "");
-                                }
-                                ?>
-                                <li>
-                                    <?= htmlspecialchars($jogador) ?>
-                                    <?php if ($primeiroNegativo): ?>
-                                        - Negativo desde <?= htmlspecialchars($primeiroNegativo) ?>
-                                        (<?= $diasNegativo ?>)
-                                    <?php else: ?>
-                                        - Data do primeiro negativo não registrada
-                                    <?php endif; ?>
-                                </li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </div>
-                <?php endif; ?>
-            </div>
-        </form>
-
-        <!-- Gráficos para o Histórico Completo -->
-        <div class="charts">
-            <div class="panel"><canvas id="barChartHistorico"></canvas></div>
-            <div class="panel"><canvas id="pieChartHistorico"></canvas></div>
+                function limparFiltroHistorico() {
+                    document.querySelector('input[name="data_inicio_historico"]').value = '';
+                    document.querySelector('input[name="data_fim_historico"]').value = '';
+                    document.querySelector('form').submit();
+                }
+            </script>
         </div>
+
         <script>
-            // Dados para os gráficos do histórico
-            const labelsHistorico = <?= json_encode(array_keys($dadosFiltrados)) ?>;
-            const depositoHistorico = <?= json_encode(array_column($dadosFiltrados, 'deposito')) ?>;
-            const saqueHistorico = <?= json_encode(array_column($dadosFiltrados, 'saque')) ?>;
-            const totaisHistorico = <?= json_encode(array_column($dadosFiltrados, 'total')) ?>;
+            // FUNÇÕES GLOBAIS
+            function ordenarTabela(tableId) {
+                let tabela = document.getElementById(tableId);
+                let linhas = Array.from(tabela.rows).slice(1, -1); // ignora cabeçalho e TOTAL GERAL
+                let coluna = document.getElementById(tableId === 'resultadoTabela' ? 'ordenarSelect' : 'ordenarSelectHistorico').value;
 
-            // Gráfico de barras para histórico
-            new Chart(document.getElementById('barChartHistorico'), {
-                type: 'bar',
-                data: {
-                    labels: labelsHistorico,
-                    datasets: [
-                        {
-                            label: 'Depósitos',
-                            data: depositoHistorico,
-                            backgroundColor: '#4caf50'
-                        },
-                        {
-                            label: 'Saques',
-                            data: saqueHistorico,
-                            backgroundColor: '#f44336'
-                        }
-                    ]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            labels: { color: "#fff" }
-                        }
-                    },
-                    scales: {
-                        x: { ticks: { color: "#fff" } },
-                        y: { ticks: { color: "#fff" } }
-                    }
-                }
-            });
+                linhas.sort((a, b) => {
+                    let valA = a.cells[coluna].innerText.trim();
+                    let valB = b.cells[coluna].innerText.trim();
 
-            // Gráfico de pizza para histórico
-            new Chart(document.getElementById('pieChartHistorico'), {
-                type: 'pie',
-                data: {
-                    labels: labelsHistorico,
-                    datasets: [{
-                        data: totaisHistorico,
-                        backgroundColor: [
-                            '#0078d7', '#00bcd4', '#4caf50', '#f44336', '#ff9800',
-                            '#9c27b0', '#03a9f4', '#8bc34a', '#e91e63', '#795548',
-                            '#607d8b', '#ff5722', '#009688', '#673ab7', '#3f51b5'
-                        ]
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            labels: { color: "#fff" }
-                        }
+                    // numérico nas colunas 1+
+                    if (coluna > 0) {
+                        return parseInt(valB) - parseInt(valA); // ordem decrescente
                     }
+                    return valA.localeCompare(valB); // ordem alfabética
+                });
+
+                // Reinserir as linhas ordenadas (antes do TOTAL GERAL)
+                const tbody = tabela.tBodies[0];
+                const totalGeralRow = tbody.rows[tbody.rows.length - 1]; // última linha (TOTAL GERAL)
+
+                // Remover todas as linhas exceto o TOTAL GERAL
+                while (tbody.rows.length > 1) {
+                    tbody.deleteRow(0);
                 }
-            });
+
+                // Adicionar as linhas ordenadas
+                linhas.forEach(l => tbody.insertBefore(l, totalGeralRow));
+            }
+
+            function filtrarTabela(tableId) {
+                let filtro = document.getElementById(tableId === 'resultadoTabela' ? 'filtroJogador' : 'filtroJogadorHistorico').value.toLowerCase();
+                let linhas = document.querySelectorAll(`#${tableId} tbody tr`);
+
+                // Ignorar a última linha (TOTAL GERAL) no filtro
+                for (let i = 0; i < linhas.length - 1; i++) {
+                    let linha = linhas[i];
+                    let jogador = linha.cells[0].innerText.toLowerCase();
+                    linha.style.display = jogador.includes(filtro) ? "" : "none";
+                }
+            }
+
+            function showTab(tabName) {
+                // Esconde todos os conteúdos
+                document.querySelectorAll('.tab-content').forEach(tab => {
+                    tab.classList.remove('active');
+                });
+
+                // Mostra o conteúdo selecionado
+                document.getElementById('tab-' + tabName).classList.add('active');
+
+                // Atualiza as abas ativas
+                document.querySelectorAll('.tab').forEach(tab => {
+                    tab.classList.remove('active');
+                });
+
+                // Encontra a aba clicada e a marca como ativa
+                const tabs = document.querySelectorAll('.tab');
+                tabs.forEach(tab => {
+                    if (tab.textContent.includes(tabName === 'resultado' ? 'Resultado' : 'Histórico')) {
+                        tab.classList.add('active');
+                    }
+                });
+            }
 
             function limparFiltroHistorico() {
                 document.querySelector('input[name="data_inicio_historico"]').value = '';
                 document.querySelector('input[name="data_fim_historico"]').value = '';
                 document.querySelector('form').submit();
             }
+
+            // Inicializar abas ao carregar a página
+            document.addEventListener('DOMContentLoaded', function () {
+                // Garantir que a aba correta esteja visível
+                const urlParams = new URLSearchParams(window.location.search);
+                const tabParam = urlParams.get('tab');
+
+                if (tabParam) {
+                    showTab(tabParam);
+                } else {
+                    // Mostrar a primeira aba por padrão
+                    showTab(<?= !empty($resultado) ? "'resultado'" : "'historico'" ?>);
+                }
+            });
         </script>
-    </div>
-
-    <script>
-        // FUNÇÕES GLOBAIS
-        function ordenarTabela(tableId) {
-            let tabela = document.getElementById(tableId);
-            let linhas = Array.from(tabela.rows).slice(1, -1); // ignora cabeçalho e TOTAL GERAL
-            let coluna = document.getElementById(tableId === 'resultadoTabela' ? 'ordenarSelect' : 'ordenarSelectHistorico').value;
-
-            linhas.sort((a, b) => {
-                let valA = a.cells[coluna].innerText.trim();
-                let valB = b.cells[coluna].innerText.trim();
-
-                // numérico nas colunas 1+
-                if (coluna > 0) {
-                    return parseInt(valB) - parseInt(valA); // ordem decrescente
-                }
-                return valA.localeCompare(valB); // ordem alfabética
-            });
-
-            // Reinserir as linhas ordenadas (antes do TOTAL GERAL)
-            const tbody = tabela.tBodies[0];
-            const totalGeralRow = tbody.rows[tbody.rows.length - 1]; // última linha (TOTAL GERAL)
-
-            // Remover todas as linhas exceto o TOTAL GERAL
-            while (tbody.rows.length > 1) {
-                tbody.deleteRow(0);
-            }
-
-            // Adicionar as linhas ordenadas
-            linhas.forEach(l => tbody.insertBefore(l, totalGeralRow));
-        }
-
-        function filtrarTabela(tableId) {
-            let filtro = document.getElementById(tableId === 'resultadoTabela' ? 'filtroJogador' : 'filtroJogadorHistorico').value.toLowerCase();
-            let linhas = document.querySelectorAll(`#${tableId} tbody tr`);
-
-            // Ignorar a última linha (TOTAL GERAL) no filtro
-            for (let i = 0; i < linhas.length - 1; i++) {
-                let linha = linhas[i];
-                let jogador = linha.cells[0].innerText.toLowerCase();
-                linha.style.display = jogador.includes(filtro) ? "" : "none";
-            }
-        }
-
-        function showTab(tabName) {
-            // Esconde todos os conteúdos
-            document.querySelectorAll('.tab-content').forEach(tab => {
-                tab.classList.remove('active');
-            });
-
-            // Mostra o conteúdo selecionado
-            document.getElementById('tab-' + tabName).classList.add('active');
-
-            // Atualiza as abas ativas
-            document.querySelectorAll('.tab').forEach(tab => {
-                tab.classList.remove('active');
-            });
-
-            // Encontra a aba clicada e a marca como ativa
-            const tabs = document.querySelectorAll('.tab');
-            tabs.forEach(tab => {
-                if (tab.textContent.includes(tabName === 'resultado' ? 'Resultado' : 'Histórico')) {
-                    tab.classList.add('active');
-                }
-            });
-        }
-
-        function limparFiltroHistorico() {
-            document.querySelector('input[name="data_inicio_historico"]').value = '';
-            document.querySelector('input[name="data_fim_historico"]').value = '';
-            document.querySelector('form').submit();
-        }
-
-        // Inicializar abas ao carregar a página
-        document.addEventListener('DOMContentLoaded', function () {
-            // Garantir que a aba correta esteja visível
-            const urlParams = new URLSearchParams(window.location.search);
-            const tabParam = urlParams.get('tab');
-
-            if (tabParam) {
-                showTab(tabParam);
-            } else {
-                // Mostrar a primeira aba por padrão
-                showTab(<?= !empty($resultado) ? "'resultado'" : "'historico'" ?>);
-            }
-        });
-    </script>
 </body>
 
 </html>

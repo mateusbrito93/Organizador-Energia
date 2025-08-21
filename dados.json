@@ -12,15 +12,15 @@
         "primeiro_negativo": null
     },
     "Avalesa": {
-        "deposito": 1410,
-        "saque": 1463,
-        "total": -53,
-        "primeiro_negativo": "18\/08\/2025 03:23"
+        "deposito": 4078,
+        "saque": 1473,
+        "total": 2605,
+        "primeiro_negativo": null
     },
     "Xand1NHoglund": {
-        "deposito": 1077,
-        "saque": 1039,
-        "total": 38,
+        "deposito": 1102,
+        "saque": 1069,
+        "total": 33,
         "primeiro_negativo": null
     },
     "Sk00r": {
@@ -36,8 +36,8 @@
         "primeiro_negativo": null
     },
     "Capitafortune": {
-        "deposito": 362,
-        "saque": 362,
+        "deposito": 372,
+        "saque": 372,
         "total": 0,
         "primeiro_negativo": null
     },
@@ -49,8 +49,8 @@
     },
     "MateusBritoO": {
         "deposito": 380,
-        "saque": 235,
-        "total": 145,
+        "saque": 245,
+        "total": 135,
         "primeiro_negativo": null
     },
     "taigona": {
@@ -69,12 +69,12 @@
         "deposito": 169,
         "saque": 170,
         "total": -1,
-        "primeiro_negativo": "05\/08\/2025 00:29"
+        "primeiro_negativo": "05\/08\/2025 00:29:33"
     },
     "Luxurie": {
         "deposito": 0,
         "saque": 10,
         "total": -10,
-        "primeiro_negativo": "23\/07\/2025 01:01"
+        "primeiro_negativo": "23\/07\/2025 01:01:00"
     }
 }

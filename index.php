@@ -4,20 +4,54 @@ session_start();
 
 function limpar($v)
 {
-    return trim($v, " \t\n\r\0\x0B\"'");
+    // Remove aspas e outros caracteres indesejados
+    $v = trim($v, " \t\n\r\0\x0B\"'");
+    // Remove aspas internas também
+    $v = str_replace(['"', "'"], '', $v);
+    return $v;
 }
 
-// Converte para timestamp aceitando "dd/mm/yyyy HH:MM[:SS]" ou "yyyy-mm-dd HH:MM[:SS]"
+// Função para converter qualquer formato de data para o formato padrão dd/mm/yyyy HH:MM:SS
+function normalizarData($dataStr)
+{
+    $dataStr = limpar($dataStr);
+
+    // Se já está no formato dd/mm/yyyy, retorna como está
+    if (preg_match('/^\d{2}\/\d{2}\/\d{4}/', $dataStr)) {
+        return $dataStr;
+    }
+
+    // Se está no formato yyyy-mm-dd, converte para dd/mm/yyyy
+    if (preg_match('/^(\d{4})-(\d{2})-(\d{2})/', $dataStr, $matches)) {
+        $hora = substr($dataStr, 11); // Pega a parte da hora se existir
+        return $matches[3] . '/' . $matches[2] . '/' . $matches[1] . (strlen($hora) > 0 ? ' ' . $hora : '');
+    }
+
+    // Se está no formato yyyy/mm/dd, converte para dd/mm/yyyy
+    if (preg_match('/^(\d{4})\/(\d{2})\/(\d{2})/', $dataStr, $matches)) {
+        $hora = substr($dataStr, 11); // Pega a parte da hora se existir
+        return $matches[3] . '/' . $matches[2] . '/' . $matches[1] . (strlen($hora) > 0 ? ' ' . $hora : '');
+    }
+
+    // Se está no formato dd-mm-yyyy, converte para dd/mm/yyyy
+    if (preg_match('/^(\d{2})-(\d{2})-(\d{4})/', $dataStr, $matches)) {
+        $hora = substr($dataStr, 11); // Pega a parte da hora se existir
+        return $matches[1] . '/' . $matches[2] . '/' . $matches[3] . (strlen($hora) > 0 ? ' ' . $hora : '');
+    }
+
+    // Se não reconhece o formato, retorna limpo
+    return $dataStr;
+}
+
+// Converte para timestamp aceitando qualquer formato de data
 function to_ts($dataStr)
 {
-    $s = limpar($dataStr);
+    $s = normalizarData($dataStr);
     // Remove escaping de barras se existir
     $s = str_replace('\/', '/', $s);
 
     // Se vem só data, adiciona 00:00:00
     if (preg_match('/^\d{2}\/\d{2}\/\d{4}$/', $s))
-        $s .= ' 00:00:00';
-    if (preg_match('/^\d{4}-\d{2}-\d{2}$/', $s))
         $s .= ' 00:00:00';
 
     // dd/mm/yyyy ...
@@ -30,8 +64,16 @@ function to_ts($dataStr)
             $rest = '00:00:00';
         return strtotime("$y-$mo-$d $rest");
     }
-    // yyyy-mm-dd ...
+
     return strtotime($s);
+}
+
+// Função para normalizar dados para comparação de duplicidade
+function normalizarParaComparacao($valor)
+{
+    $valor = limpar($valor);
+    $valor = mb_strtolower($valor, 'UTF-8');
+    return $valor;
 }
 
 $linhas_raw = isset($_POST['log']) ? trim($_POST['log']) : '';
@@ -91,7 +133,7 @@ if ($linhas_raw !== '' && isset($_POST['processar']) && !$processamentoConcluido
         if (stripos($colunas[0], "data") !== false)
             continue;
 
-        $dataStr = limpar($colunas[0]);
+        $dataStr = normalizarData(limpar($colunas[0])); // NORMALIZAR A DATA
         $jogador = limpar($colunas[1]);
         $motivo = mb_strtolower(limpar($colunas[2]), 'UTF-8');
         $quantidade = (int) limpar($colunas[3]);
@@ -100,15 +142,24 @@ if ($linhas_raw !== '' && isset($_POST['processar']) && !$processamentoConcluido
         if ($ts === false)
             continue;
 
-        // Verificar duplicidade
+        // Verificar duplicidade com dados normalizados
         $duplicado = false;
         if (!empty($dadosBrutosExistentes)) {
             foreach ($dadosBrutosExistentes as $registroExistente) {
+                // Normalizar todos os campos para comparação
+                $dataStrNormalizada = normalizarParaComparacao($dataStr);
+                $jogadorNormalizado = normalizarParaComparacao($jogador);
+                $motivoNormalizado = normalizarParaComparacao($motivo);
+
+                $dataExistenteNormalizada = normalizarParaComparacao($registroExistente['data_str']);
+                $jogadorExistenteNormalizado = normalizarParaComparacao($registroExistente['jogador']);
+                $motivoExistenteNormalizado = normalizarParaComparacao($registroExistente['motivo']);
+
                 if (
-                    $registroExistente['data_str'] === $dataStr &&
-                    $registroExistente['jogador'] === $jogador &&
-                    $registroExistente['motivo'] === $motivo &&
-                    $registroExistente['quantidade'] == $quantidade
+                    $dataStrNormalizada === $dataExistenteNormalizada &&
+                    $jogadorNormalizado === $jogadorExistenteNormalizado &&
+                    $motivoNormalizado === $motivoExistenteNormalizado &&
+                    $quantidade == $registroExistente['quantidade']
                 ) {
                     $duplicado = true;
                     $logsDuplicados[] = "$dataStr - $jogador - $motivo - $quantidade";
@@ -124,7 +175,7 @@ if ($linhas_raw !== '' && isset($_POST['processar']) && !$processamentoConcluido
         // Criar array temporário para este registro
         $novoRegistro = [
             'ts' => $ts,
-            'data_str' => $dataStr,
+            'data_str' => $dataStr, // Já normalizada para dd/mm/yyyy
             'jogador' => $jogador,
             'motivo' => $motivo,
             'quantidade' => $quantidade

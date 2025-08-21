@@ -2,66 +2,79 @@
     "TargaryenR0X": {
         "deposito": 1138,
         "saque": 1069,
-        "total": 69
+        "total": 69,
+        "primeiro_negativo": "20\/08\/2025 05:14"
     },
     "ArtDrk": {
         "deposito": 4432,
         "saque": 3621,
-        "total": 811
+        "total": 811,
+        "primeiro_negativo": "20\/08\/2025 01:29"
     },
     "Avalesa": {
         "deposito": 1410,
         "saque": 1463,
-        "total": -53
+        "total": -53,
+        "primeiro_negativo": "20\/08\/2025 01:28"
     },
     "Xand1NHoglund": {
         "deposito": 1077,
         "saque": 1039,
-        "total": 38
+        "total": 38,
+        "primeiro_negativo": "20\/08\/2025 00:53"
     },
     "Sk00r": {
         "deposito": 549,
         "saque": 453,
-        "total": 96
+        "total": 96,
+        "primeiro_negativo": "19\/08\/2025 02:52"
     },
     "Hayrman": {
         "deposito": 685,
         "saque": 678,
-        "total": 7
+        "total": 7,
+        "primeiro_negativo": null
     },
     "Capitafortune": {
         "deposito": 362,
         "saque": 362,
-        "total": 0
+        "total": 0,
+        "primeiro_negativo": null
     },
     "Iwillkillyou": {
         "deposito": 37,
         "saque": 30,
-        "total": 7
+        "total": 7,
+        "primeiro_negativo": null
     },
     "MateusBritoO": {
         "deposito": 380,
         "saque": 235,
-        "total": 145
+        "total": 145,
+        "primeiro_negativo": "18\/08\/2025 03:19"
     },
     "taigona": {
         "deposito": 309,
         "saque": 277,
-        "total": 32
+        "total": 32,
+        "primeiro_negativo": "15\/08\/2025 21:14"
     },
     "EdCigano": {
         "deposito": 94,
         "saque": 0,
-        "total": 94
+        "total": 94,
+        "primeiro_negativo": null
     },
     "LordCalopsita": {
         "deposito": 169,
         "saque": 170,
-        "total": -1
+        "total": -1,
+        "primeiro_negativo": "05\/08\/2025 00:29"
     },
     "Luxurie": {
         "deposito": 0,
         "saque": 10,
-        "total": -10
+        "total": -10,
+        "primeiro_negativo": "23\/07\/2025 01:01"
     }
 }

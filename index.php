@@ -94,12 +94,13 @@ if ($linhas_raw !== '') {
         ];
         $players[$jogador] = true;
 
-        // Processar para dados salvos - CORREÇÃO AQUI
+        // Processar para dados salvos
         if (!isset($dadosSalvos[$jogador])) {
             $dadosSalvos[$jogador] = [
                 "deposito" => 0,
                 "saque" => 0,
-                "total" => 0
+                "total" => 0,
+                "primeiro_negativo" => null // chave para armazenar a data do primeiro negativo
             ];
         }
 
@@ -109,6 +110,11 @@ if ($linhas_raw !== '') {
         } elseif ($motivo === "saque") {
             $dadosSalvos[$jogador]["saque"] += abs($quantidade); // Converte negativo para positivo
             $dadosSalvos[$jogador]["total"] += $quantidade; // Já que $quantidade é negativo, soma negativo = subtrai
+        }
+
+        // Verificar se ficou negativo e registrar a data
+        if ($dadosSalvos[$jogador]["total"] < 0 && $dadosSalvos[$jogador]["primeiro_negativo"] === null) {
+            $dadosSalvos[$jogador]["primeiro_negativo"] = $dataStr;
         }
     }
 
@@ -662,8 +668,26 @@ file_put_contents($arquivoDadosBrutos, json_encode($dadosBrutosExistentes, JSON_
                     <div style="background: #ff4444; color: white; padding: 10px; border-radius: 8px; margin-top: 15px;">
                         <strong>⚠️ ALERTA: Jogadores com saldo negativo:</strong>
                         <ul>
-                            <?php foreach ($jogadoresNegativos as $jogador): ?>
-                                <li><?= htmlspecialchars($jogador) ?></li>
+                            <?php foreach ($jogadoresNegativos as $jogador):
+                                // Usar $dadosSalvos em vez de $dadosFiltrados para pegar o primeiro_negativo
+                                $primeiroNegativo = $dadosSalvos[$jogador]["primeiro_negativo"] ?? null;
+                                $diasNegativo = null;
+
+                                if ($primeiroNegativo) {
+                                    $dataPrimeiroNegativo = to_ts($primeiroNegativo);
+                                    $dias = floor((time() - $dataPrimeiroNegativo) / (60 * 60 * 24));
+                                    $diasNegativo = $dias . " dia" . ($dias != 1 ? "s" : "");
+                                }
+                                ?>
+                                <li>
+                                    <?= htmlspecialchars($jogador) ?>
+                                    <?php if ($primeiroNegativo): ?>
+                                        - Negativo desde <?= htmlspecialchars($primeiroNegativo) ?>
+                                        (<?= $diasNegativo ?>)
+                                    <?php else: ?>
+                                        - Data do primeiro negativo não registrada
+                                    <?php endif; ?>
+                                </li>
                             <?php endforeach; ?>
                         </ul>
                     </div>
@@ -676,7 +700,6 @@ file_put_contents($arquivoDadosBrutos, json_encode($dadosBrutosExistentes, JSON_
             <div class="panel"><canvas id="barChartHistorico"></canvas></div>
             <div class="panel"><canvas id="pieChartHistorico"></canvas></div>
         </div>
-
         <script>
             // Dados para os gráficos do histórico
             const labelsHistorico = <?= json_encode(array_keys($dadosFiltrados)) ?>;
@@ -749,6 +772,7 @@ file_put_contents($arquivoDadosBrutos, json_encode($dadosBrutosExistentes, JSON_
     </div>
 
     <script>
+        // FUNÇÕES GLOBAIS
         function ordenarTabela(tableId) {
             let tabela = document.getElementById(tableId);
             let linhas = Array.from(tabela.rows).slice(1, -1); // ignora cabeçalho e TOTAL GERAL
@@ -803,7 +827,14 @@ file_put_contents($arquivoDadosBrutos, json_encode($dadosBrutosExistentes, JSON_
             document.querySelectorAll('.tab').forEach(tab => {
                 tab.classList.remove('active');
             });
-            event.currentTarget.classList.add('active');
+
+            // Encontra a aba clicada e a marca como ativa
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => {
+                if (tab.textContent.includes(tabName === 'resultado' ? 'Resultado' : 'Histórico')) {
+                    tab.classList.add('active');
+                }
+            });
         }
 
         function limparFiltroHistorico() {
@@ -811,6 +842,20 @@ file_put_contents($arquivoDadosBrutos, json_encode($dadosBrutosExistentes, JSON_
             document.querySelector('input[name="data_fim_historico"]').value = '';
             document.querySelector('form').submit();
         }
+
+        // Inicializar abas ao carregar a página
+        document.addEventListener('DOMContentLoaded', function () {
+            // Garantir que a aba correta esteja visível
+            const urlParams = new URLSearchParams(window.location.search);
+            const tabParam = urlParams.get('tab');
+
+            if (tabParam) {
+                showTab(tabParam);
+            } else {
+                // Mostrar a primeira aba por padrão
+                showTab(<?= !empty($resultado) ? "'resultado'" : "'historico'" ?>);
+            }
+        });
     </script>
 </body>
 

@@ -1,5 +1,4 @@
 <?php
-// Iniciar sessão NO TOPO do arquivo, antes de qualquer output
 session_start();
 
 function limpar($v)

@@ -1,0 +1,3425 @@
+[
+    {
+        "ts": 1755664440,
+        "data_str": "20\/08\/2025 06:34",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1755664140,
+        "data_str": "20\/08\/2025 06:29",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755659640,
+        "data_str": "20\/08\/2025 05:14",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755650220,
+        "data_str": "20\/08\/2025 02:37",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1755648360,
+        "data_str": "20\/08\/2025 02:06",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755646140,
+        "data_str": "20\/08\/2025 01:29",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755646080,
+        "data_str": "20\/08\/2025 01:28",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755644340,
+        "data_str": "20\/08\/2025 00:59",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755643980,
+        "data_str": "20\/08\/2025 00:53",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755643980,
+        "data_str": "20\/08\/2025 00:53",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755566460,
+        "data_str": "19\/08\/2025 03:21",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755565800,
+        "data_str": "19\/08\/2025 03:10",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755565140,
+        "data_str": "19\/08\/2025 02:59",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755564720,
+        "data_str": "19\/08\/2025 02:52",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755564420,
+        "data_str": "19\/08\/2025 02:47",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755563640,
+        "data_str": "19\/08\/2025 02:34",
+        "jogador": "Hayrman",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 7
+    },
+    {
+        "ts": 1755563400,
+        "data_str": "19\/08\/2025 02:30",
+        "jogador": "Xand1NHoglund",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 7
+    },
+    {
+        "ts": 1755563220,
+        "data_str": "19\/08\/2025 02:27",
+        "jogador": "Xand1NHoglund",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 13
+    },
+    {
+        "ts": 1755559920,
+        "data_str": "19\/08\/2025 01:32",
+        "jogador": "Capitafortune",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 32
+    },
+    {
+        "ts": 1755559740,
+        "data_str": "19\/08\/2025 01:29",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755556740,
+        "data_str": "19\/08\/2025 00:39",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755556740,
+        "data_str": "19\/08\/2025 00:39",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755556740,
+        "data_str": "19\/08\/2025 00:39",
+        "jogador": "ArtDrk",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 188
+    },
+    {
+        "ts": 1755529740,
+        "data_str": "18\/08\/2025 17:09",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 35
+    },
+    {
+        "ts": 1755496860,
+        "data_str": "18\/08\/2025 08:01",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 11
+    },
+    {
+        "ts": 1755488640,
+        "data_str": "18\/08\/2025 05:44",
+        "jogador": "Iwillkillyou",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 7
+    },
+    {
+        "ts": 1755481380,
+        "data_str": "18\/08\/2025 03:43",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755480180,
+        "data_str": "18\/08\/2025 03:23",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755479940,
+        "data_str": "18\/08\/2025 03:19",
+        "jogador": "MateusBritoO",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755479040,
+        "data_str": "18\/08\/2025 03:04",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755476100,
+        "data_str": "18\/08\/2025 02:15",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755472500,
+        "data_str": "18\/08\/2025 01:15",
+        "jogador": "Xand1NHoglund",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 17
+    },
+    {
+        "ts": 1755467820,
+        "data_str": "17\/08\/2025 23:57",
+        "jogador": "Xand1NHoglund",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1755451080,
+        "data_str": "17\/08\/2025 19:18",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755437940,
+        "data_str": "17\/08\/2025 15:39",
+        "jogador": "ArtDrk",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1755394920,
+        "data_str": "17\/08\/2025 03:42",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755393540,
+        "data_str": "17\/08\/2025 03:19",
+        "jogador": "MateusBritoO",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755393000,
+        "data_str": "17\/08\/2025 03:10",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755392520,
+        "data_str": "17\/08\/2025 03:02",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755391380,
+        "data_str": "17\/08\/2025 02:43",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755389220,
+        "data_str": "17\/08\/2025 02:07",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755389160,
+        "data_str": "17\/08\/2025 02:06",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755388380,
+        "data_str": "17\/08\/2025 01:53",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755387300,
+        "data_str": "17\/08\/2025 01:35",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755386220,
+        "data_str": "17\/08\/2025 01:17",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755386160,
+        "data_str": "17\/08\/2025 01:16",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755385980,
+        "data_str": "17\/08\/2025 01:13",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755316860,
+        "data_str": "16\/08\/2025 06:01",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755305520,
+        "data_str": "16\/08\/2025 02:52",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755303840,
+        "data_str": "16\/08\/2025 02:24",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1755303480,
+        "data_str": "16\/08\/2025 02:18",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755285960,
+        "data_str": "15\/08\/2025 21:26",
+        "jogador": "Capitafortune",
+        "motivo": "saque",
+        "quantidade": -3
+    },
+    {
+        "ts": 1755285720,
+        "data_str": "15\/08\/2025 21:22",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755285540,
+        "data_str": "15\/08\/2025 21:19",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755285240,
+        "data_str": "15\/08\/2025 21:14",
+        "jogador": "taigona",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755285180,
+        "data_str": "15\/08\/2025 21:13",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755282900,
+        "data_str": "15\/08\/2025 20:35",
+        "jogador": "EdCigano",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 9
+    },
+    {
+        "ts": 1755282480,
+        "data_str": "15\/08\/2025 20:28",
+        "jogador": "Xand1NHoglund",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1755281820,
+        "data_str": "15\/08\/2025 20:17",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755281760,
+        "data_str": "15\/08\/2025 20:16",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755281640,
+        "data_str": "15\/08\/2025 20:14",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755281640,
+        "data_str": "15\/08\/2025 20:14",
+        "jogador": "taigona",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755279180,
+        "data_str": "15\/08\/2025 19:33",
+        "jogador": "Xand1NHoglund",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1755225420,
+        "data_str": "15\/08\/2025 04:37",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755222720,
+        "data_str": "15\/08\/2025 03:52",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755222600,
+        "data_str": "15\/08\/2025 03:50",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755221400,
+        "data_str": "15\/08\/2025 03:30",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755215160,
+        "data_str": "15\/08\/2025 01:46",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755213000,
+        "data_str": "15\/08\/2025 01:10",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755211020,
+        "data_str": "15\/08\/2025 00:37",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755210660,
+        "data_str": "15\/08\/2025 00:31",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755206820,
+        "data_str": "14\/08\/2025 23:27",
+        "jogador": "taigona",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755137100,
+        "data_str": "14\/08\/2025 04:05",
+        "jogador": "Capitafortune",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1755108600,
+        "data_str": "13\/08\/2025 20:10",
+        "jogador": "Sk00r",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 5
+    },
+    {
+        "ts": 1755092880,
+        "data_str": "13\/08\/2025 15:48",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755057780,
+        "data_str": "13\/08\/2025 06:03",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 123
+    },
+    {
+        "ts": 1755043200,
+        "data_str": "13\/08\/2025 02:00",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755038640,
+        "data_str": "13\/08\/2025 00:44",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755038580,
+        "data_str": "13\/08\/2025 00:43",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755037620,
+        "data_str": "13\/08\/2025 00:27",
+        "jogador": "Xand1NHoglund",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1755036540,
+        "data_str": "13\/08\/2025 00:09",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755036000,
+        "data_str": "13\/08\/2025 00:00",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755036000,
+        "data_str": "13\/08\/2025 00:00",
+        "jogador": "Xand1NHoglund",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 52
+    },
+    {
+        "ts": 1755035400,
+        "data_str": "12\/08\/2025 23:50",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755035040,
+        "data_str": "12\/08\/2025 23:44",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755034980,
+        "data_str": "12\/08\/2025 23:43",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755034980,
+        "data_str": "12\/08\/2025 23:43",
+        "jogador": "ArtDrk",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 773
+    },
+    {
+        "ts": 1755034980,
+        "data_str": "12\/08\/2025 23:43",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -616
+    },
+    {
+        "ts": 1755034560,
+        "data_str": "12\/08\/2025 23:36",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755032340,
+        "data_str": "12\/08\/2025 22:59",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1755012840,
+        "data_str": "12\/08\/2025 17:34",
+        "jogador": "EdCigano",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 46
+    },
+    {
+        "ts": 1754985000,
+        "data_str": "12\/08\/2025 09:50",
+        "jogador": "Sk00r",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 100
+    },
+    {
+        "ts": 1754957760,
+        "data_str": "12\/08\/2025 02:16",
+        "jogador": "Sk00r",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1754954880,
+        "data_str": "12\/08\/2025 01:28",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754954820,
+        "data_str": "12\/08\/2025 01:27",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754953440,
+        "data_str": "12\/08\/2025 01:04",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754953320,
+        "data_str": "12\/08\/2025 01:02",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754952360,
+        "data_str": "12\/08\/2025 00:46",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754952360,
+        "data_str": "12\/08\/2025 00:46",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754952180,
+        "data_str": "12\/08\/2025 00:43",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754949960,
+        "data_str": "12\/08\/2025 00:06",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754949840,
+        "data_str": "12\/08\/2025 00:04",
+        "jogador": "Xand1NHoglund",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 7
+    },
+    {
+        "ts": 1754948520,
+        "data_str": "11\/08\/2025 23:42",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754948520,
+        "data_str": "11\/08\/2025 23:42",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754947980,
+        "data_str": "11\/08\/2025 23:33",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754947440,
+        "data_str": "11\/08\/2025 23:24",
+        "jogador": "Sk00r",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 72
+    },
+    {
+        "ts": 1754946720,
+        "data_str": "11\/08\/2025 23:12",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754939160,
+        "data_str": "11\/08\/2025 21:06",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 22
+    },
+    {
+        "ts": 1754933040,
+        "data_str": "11\/08\/2025 19:24",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1754931300,
+        "data_str": "11\/08\/2025 18:55",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754875080,
+        "data_str": "11\/08\/2025 03:18",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754874780,
+        "data_str": "11\/08\/2025 03:13",
+        "jogador": "Xand1NHoglund",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 13
+    },
+    {
+        "ts": 1754860740,
+        "data_str": "10\/08\/2025 23:19",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754860440,
+        "data_str": "10\/08\/2025 23:14",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754859600,
+        "data_str": "10\/08\/2025 23:00",
+        "jogador": "Xand1NHoglund",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 7
+    },
+    {
+        "ts": 1754859060,
+        "data_str": "10\/08\/2025 22:51",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754859060,
+        "data_str": "10\/08\/2025 22:51",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754856240,
+        "data_str": "10\/08\/2025 22:04",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754856180,
+        "data_str": "10\/08\/2025 22:03",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754852880,
+        "data_str": "10\/08\/2025 21:08",
+        "jogador": "EdCigano",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 39
+    },
+    {
+        "ts": 1754845380,
+        "data_str": "10\/08\/2025 19:03",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754844060,
+        "data_str": "10\/08\/2025 18:41",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754843940,
+        "data_str": "10\/08\/2025 18:39",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754843520,
+        "data_str": "10\/08\/2025 18:32",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754843100,
+        "data_str": "10\/08\/2025 18:25",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754793300,
+        "data_str": "10\/08\/2025 04:35",
+        "jogador": "Capitafortune",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 11
+    },
+    {
+        "ts": 1754789940,
+        "data_str": "10\/08\/2025 03:39",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754788200,
+        "data_str": "10\/08\/2025 03:10",
+        "jogador": "Capitafortune",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754787060,
+        "data_str": "10\/08\/2025 02:51",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754766060,
+        "data_str": "09\/08\/2025 21:01",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754763960,
+        "data_str": "09\/08\/2025 20:26",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 7
+    },
+    {
+        "ts": 1754704320,
+        "data_str": "09\/08\/2025 03:52",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754704320,
+        "data_str": "09\/08\/2025 03:52",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754704320,
+        "data_str": "09\/08\/2025 03:52",
+        "jogador": "Capitafortune",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754703420,
+        "data_str": "09\/08\/2025 03:37",
+        "jogador": "taigona",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754703240,
+        "data_str": "09\/08\/2025 03:34",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754702700,
+        "data_str": "09\/08\/2025 03:25",
+        "jogador": "taigona",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754702640,
+        "data_str": "09\/08\/2025 03:24",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754701800,
+        "data_str": "09\/08\/2025 03:10",
+        "jogador": "Capitafortune",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754701800,
+        "data_str": "09\/08\/2025 03:10",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754700540,
+        "data_str": "09\/08\/2025 02:49",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754700420,
+        "data_str": "09\/08\/2025 02:47",
+        "jogador": "taigona",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754699880,
+        "data_str": "09\/08\/2025 02:38",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754699820,
+        "data_str": "09\/08\/2025 02:37",
+        "jogador": "taigona",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754691060,
+        "data_str": "09\/08\/2025 00:11",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754609880,
+        "data_str": "08\/08\/2025 01:38",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754609880,
+        "data_str": "08\/08\/2025 01:38",
+        "jogador": "ArtDrk",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 177
+    },
+    {
+        "ts": 1754608620,
+        "data_str": "08\/08\/2025 01:17",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754608500,
+        "data_str": "08\/08\/2025 01:15",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754608320,
+        "data_str": "08\/08\/2025 01:12",
+        "jogador": "MateusBritoO",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754607840,
+        "data_str": "08\/08\/2025 01:04",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754534340,
+        "data_str": "07\/08\/2025 04:39",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -1
+    },
+    {
+        "ts": 1754527380,
+        "data_str": "07\/08\/2025 02:43",
+        "jogador": "Xand1NHoglund",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1754525160,
+        "data_str": "07\/08\/2025 02:06",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754524680,
+        "data_str": "07\/08\/2025 01:58",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754438700,
+        "data_str": "06\/08\/2025 02:05",
+        "jogador": "LordCalopsita",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 4
+    },
+    {
+        "ts": 1754434320,
+        "data_str": "06\/08\/2025 00:52",
+        "jogador": "Xand1NHoglund",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 6
+    },
+    {
+        "ts": 1754434260,
+        "data_str": "06\/08\/2025 00:51",
+        "jogador": "Xand1NHoglund",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1754434140,
+        "data_str": "06\/08\/2025 00:49",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754431320,
+        "data_str": "06\/08\/2025 00:02",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754430180,
+        "data_str": "05\/08\/2025 23:43",
+        "jogador": "Xand1NHoglund",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1754430060,
+        "data_str": "05\/08\/2025 23:41",
+        "jogador": "Xand1NHoglund",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1754429100,
+        "data_str": "05\/08\/2025 23:25",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754428380,
+        "data_str": "05\/08\/2025 23:13",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754359980,
+        "data_str": "05\/08\/2025 04:13",
+        "jogador": "Sk00r",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 6
+    },
+    {
+        "ts": 1754351280,
+        "data_str": "05\/08\/2025 01:48",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754348640,
+        "data_str": "05\/08\/2025 01:04",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754346840,
+        "data_str": "05\/08\/2025 00:34",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754346540,
+        "data_str": "05\/08\/2025 00:29",
+        "jogador": "LordCalopsita",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754346540,
+        "data_str": "05\/08\/2025 00:29",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754343540,
+        "data_str": "04\/08\/2025 23:39",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -3
+    },
+    {
+        "ts": 1754343120,
+        "data_str": "04\/08\/2025 23:32",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754343000,
+        "data_str": "04\/08\/2025 23:30",
+        "jogador": "LordCalopsita",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754342820,
+        "data_str": "04\/08\/2025 23:27",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754342640,
+        "data_str": "04\/08\/2025 23:24",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754342400,
+        "data_str": "04\/08\/2025 23:20",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754325840,
+        "data_str": "04\/08\/2025 18:44",
+        "jogador": "LordCalopsita",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 21
+    },
+    {
+        "ts": 1754184660,
+        "data_str": "03\/08\/2025 03:31",
+        "jogador": "Xand1NHoglund",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1754183760,
+        "data_str": "03\/08\/2025 03:16",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754183760,
+        "data_str": "03\/08\/2025 03:16",
+        "jogador": "Xand1NHoglund",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 16
+    },
+    {
+        "ts": 1754182560,
+        "data_str": "03\/08\/2025 02:56",
+        "jogador": "Sk00r",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1754182560,
+        "data_str": "03\/08\/2025 02:56",
+        "jogador": "Xand1NHoglund",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 16
+    },
+    {
+        "ts": 1754179500,
+        "data_str": "03\/08\/2025 02:05",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754179500,
+        "data_str": "03\/08\/2025 02:05",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754179440,
+        "data_str": "03\/08\/2025 02:04",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754179380,
+        "data_str": "03\/08\/2025 02:03",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754179140,
+        "data_str": "03\/08\/2025 01:59",
+        "jogador": "Xand1NHoglund",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 3
+    },
+    {
+        "ts": 1754176380,
+        "data_str": "03\/08\/2025 01:13",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754175540,
+        "data_str": "03\/08\/2025 00:59",
+        "jogador": "Xand1NHoglund",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1754175480,
+        "data_str": "03\/08\/2025 00:58",
+        "jogador": "ArtDrk",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 650
+    },
+    {
+        "ts": 1754175480,
+        "data_str": "03\/08\/2025 00:58",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -650
+    },
+    {
+        "ts": 1754175240,
+        "data_str": "03\/08\/2025 00:54",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754135520,
+        "data_str": "02\/08\/2025 13:52",
+        "jogador": "Avalesa",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 5
+    },
+    {
+        "ts": 1754113020,
+        "data_str": "02\/08\/2025 07:37",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754088120,
+        "data_str": "02\/08\/2025 00:42",
+        "jogador": "LordCalopsita",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 8
+    },
+    {
+        "ts": 1754087160,
+        "data_str": "02\/08\/2025 00:26",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754086980,
+        "data_str": "02\/08\/2025 00:23",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754085660,
+        "data_str": "02\/08\/2025 00:01",
+        "jogador": "ArtDrk",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 170
+    },
+    {
+        "ts": 1754085180,
+        "data_str": "01\/08\/2025 23:53",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754084760,
+        "data_str": "01\/08\/2025 23:46",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1754076780,
+        "data_str": "01\/08\/2025 21:33",
+        "jogador": "Avalesa",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 7
+    },
+    {
+        "ts": 1753988880,
+        "data_str": "31\/07\/2025 21:08",
+        "jogador": "LordCalopsita",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 7
+    },
+    {
+        "ts": 1753918800,
+        "data_str": "31\/07\/2025 01:40",
+        "jogador": "Capitafortune",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753918800,
+        "data_str": "31\/07\/2025 01:40",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753918140,
+        "data_str": "31\/07\/2025 01:29",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753917240,
+        "data_str": "31\/07\/2025 01:14",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753915920,
+        "data_str": "31\/07\/2025 00:52",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753914420,
+        "data_str": "31\/07\/2025 00:27",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753911960,
+        "data_str": "30\/07\/2025 23:46",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 41
+    },
+    {
+        "ts": 1753849680,
+        "data_str": "30\/07\/2025 06:28",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -7
+    },
+    {
+        "ts": 1753840620,
+        "data_str": "30\/07\/2025 03:57",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753834980,
+        "data_str": "30\/07\/2025 02:23",
+        "jogador": "Sk00r",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 8
+    },
+    {
+        "ts": 1753833840,
+        "data_str": "30\/07\/2025 02:04",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753828920,
+        "data_str": "30\/07\/2025 00:42",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 7
+    },
+    {
+        "ts": 1753772280,
+        "data_str": "29\/07\/2025 08:58",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753771020,
+        "data_str": "29\/07\/2025 08:37",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753673040,
+        "data_str": "28\/07\/2025 05:24",
+        "jogador": "Capitafortune",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 309
+    },
+    {
+        "ts": 1753673040,
+        "data_str": "28\/07\/2025 05:24",
+        "jogador": "Capitafortune",
+        "motivo": "saque",
+        "quantidade": -309
+    },
+    {
+        "ts": 1753668780,
+        "data_str": "28\/07\/2025 04:13",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753653420,
+        "data_str": "27\/07\/2025 23:57",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753652880,
+        "data_str": "27\/07\/2025 23:48",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753650660,
+        "data_str": "27\/07\/2025 23:11",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753650180,
+        "data_str": "27\/07\/2025 23:03",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753650060,
+        "data_str": "27\/07\/2025 23:01",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753649400,
+        "data_str": "27\/07\/2025 22:50",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753649400,
+        "data_str": "27\/07\/2025 22:50",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753636200,
+        "data_str": "27\/07\/2025 19:10",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753618980,
+        "data_str": "27\/07\/2025 14:23",
+        "jogador": "LordCalopsita",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 8
+    },
+    {
+        "ts": 1753617540,
+        "data_str": "27\/07\/2025 13:59",
+        "jogador": "LordCalopsita",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753617540,
+        "data_str": "27\/07\/2025 13:59",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753491720,
+        "data_str": "26\/07\/2025 03:02",
+        "jogador": "ArtDrk",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 27
+    },
+    {
+        "ts": 1753488120,
+        "data_str": "26\/07\/2025 02:02",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753487220,
+        "data_str": "26\/07\/2025 01:47",
+        "jogador": "Sk00r",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 25
+    },
+    {
+        "ts": 1753486320,
+        "data_str": "26\/07\/2025 01:32",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753486320,
+        "data_str": "26\/07\/2025 01:32",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753486320,
+        "data_str": "26\/07\/2025 01:32",
+        "jogador": "Capitafortune",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753486320,
+        "data_str": "26\/07\/2025 01:32",
+        "jogador": "taigona",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753486140,
+        "data_str": "26\/07\/2025 01:29",
+        "jogador": "LordCalopsita",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753484700,
+        "data_str": "26\/07\/2025 01:05",
+        "jogador": "LordCalopsita",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753484040,
+        "data_str": "26\/07\/2025 00:54",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753482480,
+        "data_str": "26\/07\/2025 00:28",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753481820,
+        "data_str": "26\/07\/2025 00:17",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753480980,
+        "data_str": "26\/07\/2025 00:03",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753480980,
+        "data_str": "26\/07\/2025 00:03",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753479480,
+        "data_str": "25\/07\/2025 23:38",
+        "jogador": "ArtDrk",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 6
+    },
+    {
+        "ts": 1753422120,
+        "data_str": "25\/07\/2025 07:42",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753410240,
+        "data_str": "25\/07\/2025 04:24",
+        "jogador": "Iwillkillyou",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1753410120,
+        "data_str": "25\/07\/2025 04:22",
+        "jogador": "Iwillkillyou",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753410120,
+        "data_str": "25\/07\/2025 04:22",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753398660,
+        "data_str": "25\/07\/2025 01:11",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753397760,
+        "data_str": "25\/07\/2025 00:56",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753397760,
+        "data_str": "25\/07\/2025 00:56",
+        "jogador": "ArtDrk",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 20
+    },
+    {
+        "ts": 1753396080,
+        "data_str": "25\/07\/2025 00:28",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753394040,
+        "data_str": "24\/07\/2025 23:54",
+        "jogador": "LordCalopsita",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753394040,
+        "data_str": "24\/07\/2025 23:54",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753394040,
+        "data_str": "24\/07\/2025 23:54",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753390260,
+        "data_str": "24\/07\/2025 22:51",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753325640,
+        "data_str": "24\/07\/2025 04:54",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 8
+    },
+    {
+        "ts": 1753313160,
+        "data_str": "24\/07\/2025 01:26",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753312500,
+        "data_str": "24\/07\/2025 01:15",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753312200,
+        "data_str": "24\/07\/2025 01:10",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753311960,
+        "data_str": "24\/07\/2025 01:06",
+        "jogador": "MateusBritoO",
+        "motivo": "saque",
+        "quantidade": -19
+    },
+    {
+        "ts": 1753311840,
+        "data_str": "24\/07\/2025 01:04",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753311840,
+        "data_str": "24\/07\/2025 01:04",
+        "jogador": "Avalesa",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 42
+    },
+    {
+        "ts": 1753310880,
+        "data_str": "24\/07\/2025 00:48",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753308900,
+        "data_str": "24\/07\/2025 00:15",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753307460,
+        "data_str": "23\/07\/2025 23:51",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753237740,
+        "data_str": "23\/07\/2025 04:29",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753235160,
+        "data_str": "23\/07\/2025 03:46",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753231260,
+        "data_str": "23\/07\/2025 02:41",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753230660,
+        "data_str": "23\/07\/2025 02:31",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753229520,
+        "data_str": "23\/07\/2025 02:12",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753229460,
+        "data_str": "23\/07\/2025 02:11",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753229460,
+        "data_str": "23\/07\/2025 02:11",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753229040,
+        "data_str": "23\/07\/2025 02:04",
+        "jogador": "MateusBritoO",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 7
+    },
+    {
+        "ts": 1753227540,
+        "data_str": "23\/07\/2025 01:39",
+        "jogador": "LordCalopsita",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753227360,
+        "data_str": "23\/07\/2025 01:36",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753225740,
+        "data_str": "23\/07\/2025 01:09",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753225740,
+        "data_str": "23\/07\/2025 01:09",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753225740,
+        "data_str": "23\/07\/2025 01:09",
+        "jogador": "MateusBritoO",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753225260,
+        "data_str": "23\/07\/2025 01:01",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753225260,
+        "data_str": "23\/07\/2025 01:01",
+        "jogador": "Luxurie",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753225200,
+        "data_str": "23\/07\/2025 01:00",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753224900,
+        "data_str": "23\/07\/2025 00:55",
+        "jogador": "LordCalopsita",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753219920,
+        "data_str": "22\/07\/2025 23:32",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753150680,
+        "data_str": "22\/07\/2025 04:18",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753148160,
+        "data_str": "22\/07\/2025 03:36",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753144740,
+        "data_str": "22\/07\/2025 02:39",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753143480,
+        "data_str": "22\/07\/2025 02:18",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753142760,
+        "data_str": "22\/07\/2025 02:06",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753142280,
+        "data_str": "22\/07\/2025 01:58",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753142160,
+        "data_str": "22\/07\/2025 01:56",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753141680,
+        "data_str": "22\/07\/2025 01:48",
+        "jogador": "MateusBritoO",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 7
+    },
+    {
+        "ts": 1753140360,
+        "data_str": "22\/07\/2025 01:26",
+        "jogador": "Xand1NHoglund",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1753139340,
+        "data_str": "22\/07\/2025 01:09",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753139160,
+        "data_str": "22\/07\/2025 01:06",
+        "jogador": "MateusBritoO",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753138260,
+        "data_str": "22\/07\/2025 00:51",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753138200,
+        "data_str": "22\/07\/2025 00:50",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753137960,
+        "data_str": "22\/07\/2025 00:46",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753134720,
+        "data_str": "21\/07\/2025 23:52",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753134660,
+        "data_str": "21\/07\/2025 23:51",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753131600,
+        "data_str": "21\/07\/2025 23:00",
+        "jogador": "ArtDrk",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 85
+    },
+    {
+        "ts": 1753131420,
+        "data_str": "21\/07\/2025 22:57",
+        "jogador": "ArtDrk",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 111
+    },
+    {
+        "ts": 1753130400,
+        "data_str": "21\/07\/2025 22:40",
+        "jogador": "Avalesa",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 23
+    },
+    {
+        "ts": 1753070880,
+        "data_str": "21\/07\/2025 06:08",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753066200,
+        "data_str": "21\/07\/2025 04:50",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 12
+    },
+    {
+        "ts": 1753065360,
+        "data_str": "21\/07\/2025 04:36",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 36
+    },
+    {
+        "ts": 1753064520,
+        "data_str": "21\/07\/2025 04:22",
+        "jogador": "Iwillkillyou",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1753062480,
+        "data_str": "21\/07\/2025 03:48",
+        "jogador": "Iwillkillyou",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753062420,
+        "data_str": "21\/07\/2025 03:47",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753057800,
+        "data_str": "21\/07\/2025 02:30",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753049220,
+        "data_str": "21\/07\/2025 00:07",
+        "jogador": "MateusBritoO",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 8
+    },
+    {
+        "ts": 1753037340,
+        "data_str": "20\/07\/2025 20:49",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753036620,
+        "data_str": "20\/07\/2025 20:37",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1753018620,
+        "data_str": "20\/07\/2025 15:37",
+        "jogador": "MateusBritoO",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 23
+    },
+    {
+        "ts": 1752979380,
+        "data_str": "20\/07\/2025 04:43",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752973320,
+        "data_str": "20\/07\/2025 03:02",
+        "jogador": "Sk00r",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1752973080,
+        "data_str": "20\/07\/2025 02:58",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752972660,
+        "data_str": "20\/07\/2025 02:51",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752971460,
+        "data_str": "20\/07\/2025 02:31",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752896160,
+        "data_str": "19\/07\/2025 05:36",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -3
+    },
+    {
+        "ts": 1752893820,
+        "data_str": "19\/07\/2025 04:57",
+        "jogador": "taigona",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752893820,
+        "data_str": "19\/07\/2025 04:57",
+        "jogador": "taigona",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 11
+    },
+    {
+        "ts": 1752893820,
+        "data_str": "19\/07\/2025 04:57",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -4
+    },
+    {
+        "ts": 1752893760,
+        "data_str": "19\/07\/2025 04:56",
+        "jogador": "taigona",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 23
+    },
+    {
+        "ts": 1752886800,
+        "data_str": "19\/07\/2025 03:00",
+        "jogador": "Avalesa",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 1323
+    },
+    {
+        "ts": 1752886800,
+        "data_str": "19\/07\/2025 03:00",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -875
+    },
+    {
+        "ts": 1752886800,
+        "data_str": "19\/07\/2025 03:00",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 462
+    },
+    {
+        "ts": 1752886800,
+        "data_str": "19\/07\/2025 03:00",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -492
+    },
+    {
+        "ts": 1752886800,
+        "data_str": "19\/07\/2025 03:00",
+        "jogador": "Xand1NHoglund",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 455
+    },
+    {
+        "ts": 1752886800,
+        "data_str": "19\/07\/2025 03:00",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -588
+    },
+    {
+        "ts": 1752886800,
+        "data_str": "19\/07\/2025 03:00",
+        "jogador": "MateusBritoO",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 286
+    },
+    {
+        "ts": 1752886800,
+        "data_str": "19\/07\/2025 03:00",
+        "jogador": "MateusBritoO",
+        "motivo": "saque",
+        "quantidade": -86
+    },
+    {
+        "ts": 1752886800,
+        "data_str": "19\/07\/2025 03:00",
+        "jogador": "taigona",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 258
+    },
+    {
+        "ts": 1752886800,
+        "data_str": "19\/07\/2025 03:00",
+        "jogador": "taigona",
+        "motivo": "saque",
+        "quantidade": -120
+    },
+    {
+        "ts": 1752886800,
+        "data_str": "19\/07\/2025 03:00",
+        "jogador": "Sk00r",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 188
+    },
+    {
+        "ts": 1752886800,
+        "data_str": "19\/07\/2025 03:00",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -130
+    },
+    {
+        "ts": 1752886800,
+        "data_str": "19\/07\/2025 03:00",
+        "jogador": "ArtDrk",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 903
+    },
+    {
+        "ts": 1752886800,
+        "data_str": "19\/07\/2025 03:00",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -580
+    },
+    {
+        "ts": 1752885420,
+        "data_str": "19\/07\/2025 02:37",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 15
+    },
+    {
+        "ts": 1752880800,
+        "data_str": "19\/07\/2025 01:20",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752880680,
+        "data_str": "19\/07\/2025 01:18",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752880320,
+        "data_str": "19\/07\/2025 01:12",
+        "jogador": "Sk00r",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1752880320,
+        "data_str": "19\/07\/2025 01:12",
+        "jogador": "Sk00r",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1752880200,
+        "data_str": "19\/07\/2025 01:10",
+        "jogador": "LordCalopsita",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1752877980,
+        "data_str": "19\/07\/2025 00:33",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752877980,
+        "data_str": "19\/07\/2025 00:33",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752794700,
+        "data_str": "18\/07\/2025 01:25",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752794640,
+        "data_str": "18\/07\/2025 01:24",
+        "jogador": "ArtDrk",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 551
+    },
+    {
+        "ts": 1752794640,
+        "data_str": "18\/07\/2025 01:24",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -551
+    },
+    {
+        "ts": 1752794580,
+        "data_str": "18\/07\/2025 01:23",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752794580,
+        "data_str": "18\/07\/2025 01:23",
+        "jogador": "ArtDrk",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 188
+    },
+    {
+        "ts": 1752792300,
+        "data_str": "18\/07\/2025 00:45",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752792240,
+        "data_str": "18\/07\/2025 00:44",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752791520,
+        "data_str": "18\/07\/2025 00:32",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752788760,
+        "data_str": "17\/07\/2025 23:46",
+        "jogador": "LordCalopsita",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752788760,
+        "data_str": "17\/07\/2025 23:46",
+        "jogador": "Iwillkillyou",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1752788760,
+        "data_str": "17\/07\/2025 23:46",
+        "jogador": "Iwillkillyou",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752788400,
+        "data_str": "17\/07\/2025 23:40",
+        "jogador": "taigona",
+        "motivo": "saque",
+        "quantidade": -7
+    },
+    {
+        "ts": 1752776820,
+        "data_str": "17\/07\/2025 20:27",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752776700,
+        "data_str": "17\/07\/2025 20:25",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1752776640,
+        "data_str": "17\/07\/2025 20:24",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752713160,
+        "data_str": "17\/07\/2025 02:46",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1752712920,
+        "data_str": "17\/07\/2025 02:42",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752707220,
+        "data_str": "17\/07\/2025 01:07",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 100
+    },
+    {
+        "ts": 1752707220,
+        "data_str": "17\/07\/2025 01:07",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752705480,
+        "data_str": "17\/07\/2025 00:38",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752705480,
+        "data_str": "17\/07\/2025 00:38",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752705420,
+        "data_str": "17\/07\/2025 00:37",
+        "jogador": "MateusBritoO",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752705240,
+        "data_str": "17\/07\/2025 00:34",
+        "jogador": "taigona",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752702180,
+        "data_str": "16\/07\/2025 23:43",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752700380,
+        "data_str": "16\/07\/2025 23:13",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752700140,
+        "data_str": "16\/07\/2025 23:09",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752699960,
+        "data_str": "16\/07\/2025 23:06",
+        "jogador": "taigona",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752699420,
+        "data_str": "16\/07\/2025 22:57",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752699000,
+        "data_str": "16\/07\/2025 22:50",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752699000,
+        "data_str": "16\/07\/2025 22:50",
+        "jogador": "MateusBritoO",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752699000,
+        "data_str": "16\/07\/2025 22:50",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752698580,
+        "data_str": "16\/07\/2025 22:43",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752698460,
+        "data_str": "16\/07\/2025 22:41",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752691740,
+        "data_str": "16\/07\/2025 20:49",
+        "jogador": "LordCalopsita",
+        "motivo": "saque",
+        "quantidade": -30
+    },
+    {
+        "ts": 1752630540,
+        "data_str": "16\/07\/2025 03:49",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752615480,
+        "data_str": "15\/07\/2025 23:38",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752615480,
+        "data_str": "15\/07\/2025 23:38",
+        "jogador": "ArtDrk",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 20
+    },
+    {
+        "ts": 1752615240,
+        "data_str": "15\/07\/2025 23:34",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752615180,
+        "data_str": "15\/07\/2025 23:33",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752615120,
+        "data_str": "15\/07\/2025 23:32",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752614940,
+        "data_str": "15\/07\/2025 23:29",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752614280,
+        "data_str": "15\/07\/2025 23:18",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752613920,
+        "data_str": "15\/07\/2025 23:12",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752613080,
+        "data_str": "15\/07\/2025 22:58",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752613020,
+        "data_str": "15\/07\/2025 22:57",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752536820,
+        "data_str": "15\/07\/2025 01:47",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752533400,
+        "data_str": "15\/07\/2025 00:50",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752533400,
+        "data_str": "15\/07\/2025 00:50",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752533160,
+        "data_str": "15\/07\/2025 00:46",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752533160,
+        "data_str": "15\/07\/2025 00:46",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752532920,
+        "data_str": "15\/07\/2025 00:42",
+        "jogador": "Sk00r",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 19
+    },
+    {
+        "ts": 1752532380,
+        "data_str": "15\/07\/2025 00:33",
+        "jogador": "Xand1NHoglund",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 20
+    },
+    {
+        "ts": 1752532260,
+        "data_str": "15\/07\/2025 00:31",
+        "jogador": "MateusBritoO",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 7
+    },
+    {
+        "ts": 1752532140,
+        "data_str": "15\/07\/2025 00:29",
+        "jogador": "Xand1NHoglund",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1752531000,
+        "data_str": "15\/07\/2025 00:10",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752529800,
+        "data_str": "14\/07\/2025 23:50",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752529740,
+        "data_str": "14\/07\/2025 23:49",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752528660,
+        "data_str": "14\/07\/2025 23:31",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 78
+    },
+    {
+        "ts": 1752525180,
+        "data_str": "14\/07\/2025 22:33",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752516060,
+        "data_str": "14\/07\/2025 20:01",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752437760,
+        "data_str": "13\/07\/2025 22:16",
+        "jogador": "Sk00r",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 55
+    },
+    {
+        "ts": 1752432180,
+        "data_str": "13\/07\/2025 20:43",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752416220,
+        "data_str": "13\/07\/2025 16:17",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752413520,
+        "data_str": "13\/07\/2025 15:32",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752358500,
+        "data_str": "13\/07\/2025 00:15",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 50
+    },
+    {
+        "ts": 1752358440,
+        "data_str": "13\/07\/2025 00:14",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 24
+    },
+    {
+        "ts": 1752358320,
+        "data_str": "13\/07\/2025 00:12",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752277860,
+        "data_str": "12\/07\/2025 01:51",
+        "jogador": "taigona",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752277800,
+        "data_str": "12\/07\/2025 01:50",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752277560,
+        "data_str": "12\/07\/2025 01:46",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752277200,
+        "data_str": "12\/07\/2025 01:40",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752277140,
+        "data_str": "12\/07\/2025 01:39",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752277140,
+        "data_str": "12\/07\/2025 01:39",
+        "jogador": "MateusBritoO",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752273480,
+        "data_str": "12\/07\/2025 00:38",
+        "jogador": "taigona",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 17
+    },
+    {
+        "ts": 1752273120,
+        "data_str": "12\/07\/2025 00:32",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 13
+    },
+    {
+        "ts": 1752270600,
+        "data_str": "11\/07\/2025 23:50",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752270240,
+        "data_str": "11\/07\/2025 23:44",
+        "jogador": "taigona",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752270180,
+        "data_str": "11\/07\/2025 23:43",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752267360,
+        "data_str": "11\/07\/2025 22:56",
+        "jogador": "ArtDrk",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 125
+    },
+    {
+        "ts": 1752258180,
+        "data_str": "11\/07\/2025 20:23",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752247080,
+        "data_str": "11\/07\/2025 17:18",
+        "jogador": "LordCalopsita",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752190800,
+        "data_str": "11\/07\/2025 01:40",
+        "jogador": "Sk00r",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 4
+    },
+    {
+        "ts": 1752179520,
+        "data_str": "10\/07\/2025 22:32",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752178620,
+        "data_str": "10\/07\/2025 22:17",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -8
+    },
+    {
+        "ts": 1752110400,
+        "data_str": "10\/07\/2025 03:20",
+        "jogador": "LordCalopsita",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 42
+    },
+    {
+        "ts": 1752105900,
+        "data_str": "10\/07\/2025 02:05",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752105780,
+        "data_str": "10\/07\/2025 02:03",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752103920,
+        "data_str": "10\/07\/2025 01:32",
+        "jogador": "MateusBritoO",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752098760,
+        "data_str": "10\/07\/2025 00:06",
+        "jogador": "ArtDrk",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1752098640,
+        "data_str": "10\/07\/2025 00:04",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752081240,
+        "data_str": "09\/07\/2025 19:14",
+        "jogador": "LordCalopsita",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1752016800,
+        "data_str": "09\/07\/2025 01:20",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -4
+    },
+    {
+        "ts": 1752013560,
+        "data_str": "09\/07\/2025 00:26",
+        "jogador": "taigona",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752013320,
+        "data_str": "09\/07\/2025 00:22",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752011940,
+        "data_str": "08\/07\/2025 23:59",
+        "jogador": "MateusBritoO",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 7
+    },
+    {
+        "ts": 1752010980,
+        "data_str": "08\/07\/2025 23:43",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752009240,
+        "data_str": "08\/07\/2025 23:14",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752008880,
+        "data_str": "08\/07\/2025 23:08",
+        "jogador": "MateusBritoO",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1752008400,
+        "data_str": "08\/07\/2025 23:00",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752008100,
+        "data_str": "08\/07\/2025 22:55",
+        "jogador": "MateusBritoO",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1752008040,
+        "data_str": "08\/07\/2025 22:54",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1751944620,
+        "data_str": "08\/07\/2025 05:17",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1751943300,
+        "data_str": "08\/07\/2025 04:55",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1751942580,
+        "data_str": "08\/07\/2025 04:43",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 4
+    },
+    {
+        "ts": 1751933100,
+        "data_str": "08\/07\/2025 02:05",
+        "jogador": "Sk00r",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1751932920,
+        "data_str": "08\/07\/2025 02:02",
+        "jogador": "Sk00r",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1751932020,
+        "data_str": "08\/07\/2025 01:47",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1751928060,
+        "data_str": "08\/07\/2025 00:41",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1751924700,
+        "data_str": "07\/07\/2025 23:45",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1751924520,
+        "data_str": "07\/07\/2025 23:42",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1751923020,
+        "data_str": "07\/07\/2025 23:17",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1751920860,
+        "data_str": "07\/07\/2025 22:41",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 6
+    },
+    {
+        "ts": 1751879760,
+        "data_str": "07\/07\/2025 11:16",
+        "jogador": "MateusBritoO",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 8
+    },
+    {
+        "ts": 1751870160,
+        "data_str": "07\/07\/2025 08:36",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 14
+    },
+    {
+        "ts": 1751849040,
+        "data_str": "07\/07\/2025 02:44",
+        "jogador": "Avalesa",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1751844060,
+        "data_str": "07\/07\/2025 01:21",
+        "jogador": "LordCalopsita",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1751843700,
+        "data_str": "07\/07\/2025 01:15",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1751843640,
+        "data_str": "07\/07\/2025 01:14",
+        "jogador": "LordCalopsita",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 18
+    },
+    {
+        "ts": 1751842860,
+        "data_str": "07\/07\/2025 01:01",
+        "jogador": "MateusBritoO",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1751842740,
+        "data_str": "07\/07\/2025 00:59",
+        "jogador": "MateusBritoO",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1751842380,
+        "data_str": "07\/07\/2025 00:53",
+        "jogador": "LordCalopsita",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1751842380,
+        "data_str": "07\/07\/2025 00:53",
+        "jogador": "taigona",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1751842260,
+        "data_str": "07\/07\/2025 00:51",
+        "jogador": "MateusBritoO",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1751842260,
+        "data_str": "07\/07\/2025 00:51",
+        "jogador": "TargaryenR0X",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1751842260,
+        "data_str": "07\/07\/2025 00:51",
+        "jogador": "Avalesa",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1751840640,
+        "data_str": "07\/07\/2025 00:24",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1751839860,
+        "data_str": "07\/07\/2025 00:11",
+        "jogador": "MateusBritoO",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 7
+    },
+    {
+        "ts": 1751838240,
+        "data_str": "06\/07\/2025 23:44",
+        "jogador": "LordCalopsita",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1751838180,
+        "data_str": "06\/07\/2025 23:43",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1751838120,
+        "data_str": "06\/07\/2025 23:42",
+        "jogador": "MateusBritoO",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1751838060,
+        "data_str": "06\/07\/2025 23:41",
+        "jogador": "LordCalopsita",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1751837760,
+        "data_str": "06\/07\/2025 23:36",
+        "jogador": "Xand1NHoglund",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1751837460,
+        "data_str": "06\/07\/2025 23:31",
+        "jogador": "Sk00r",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 7
+    },
+    {
+        "ts": 1751837460,
+        "data_str": "06\/07\/2025 23:31",
+        "jogador": "LordCalopsita",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 41
+    },
+    {
+        "ts": 1751837340,
+        "data_str": "06\/07\/2025 23:29",
+        "jogador": "Xand1NHoglund",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 325
+    },
+    {
+        "ts": 1751827980,
+        "data_str": "06\/07\/2025 20:53",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -10
+    },
+    {
+        "ts": 1751823180,
+        "data_str": "06\/07\/2025 19:33",
+        "jogador": "ArtDrk",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 25
+    },
+    {
+        "ts": 1751822880,
+        "data_str": "06\/07\/2025 19:28",
+        "jogador": "ArtDrk",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 393
+    },
+    {
+        "ts": 1751822880,
+        "data_str": "06\/07\/2025 19:28",
+        "jogador": "ArtDrk",
+        "motivo": "saque",
+        "quantidade": -323
+    },
+    {
+        "ts": 1751822520,
+        "data_str": "06\/07\/2025 19:22",
+        "jogador": "TargaryenR0X",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 10
+    },
+    {
+        "ts": 1750323600,
+        "data_str": "19\/06\/2025 11:00",
+        "jogador": "Hayrman",
+        "motivo": "dep\u00f3sito",
+        "quantidade": 678
+    },
+    {
+        "ts": 1750323600,
+        "data_str": "19\/06\/2025 11:00",
+        "jogador": "Hayrman",
+        "motivo": "saque",
+        "quantidade": -678
+    }
+]

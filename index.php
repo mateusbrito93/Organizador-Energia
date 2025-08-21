@@ -421,6 +421,27 @@ file_put_contents($arquivoDadosBrutos, json_encode($dadosBrutosExistentes, JSON_
         .tab-content.active {
             display: block;
         }
+
+        .total-negativo {
+            background-color: #ff4444 !important;
+            color: white !important;
+            font-weight: bold;
+        }
+
+        .total-negativo td {
+            background-color: #ff4444 !important;
+            color: white !important;
+            font-weight: bold;
+        }
+
+        #tab-historico .alert-negativo {
+            background: #ff4444;
+            color: white;
+            padding: 10px;
+            border-radius: 8px;
+            margin-top: 15px;
+            border-left: 4px solid #cc0000;
+        }
     </style>
 </head>
 
@@ -606,13 +627,20 @@ file_put_contents($arquivoDadosBrutos, json_encode($dadosBrutosExistentes, JSON_
                         $totalGeralDepositos = 0;
                         $totalGeralSaques = 0;
                         $totalGeralTotal = 0;
+                        $jogadoresNegativos = [];
 
                         foreach ($dadosFiltrados as $jogador => $dados):
                             $totalGeralDepositos += $dados['deposito'];
                             $totalGeralSaques += $dados['saque'];
                             $totalGeralTotal += $dados['total'];
+
+                            // Verificar se o total é negativo
+                            $totalNegativo = $dados['total'] < 0;
+                            if ($totalNegativo) {
+                                $jogadoresNegativos[] = $jogador;
+                            }
                             ?>
-                            <tr>
+                            <tr class="<?= $totalNegativo ? 'total-negativo' : '' ?>">
                                 <td><?= htmlspecialchars($jogador) ?></td>
                                 <td><?= $dados['deposito'] ?></td>
                                 <td><?= $dados['saque'] ?></td>
@@ -629,6 +657,17 @@ file_put_contents($arquivoDadosBrutos, json_encode($dadosBrutosExistentes, JSON_
                         </tr>
                     </tfoot>
                 </table>
+
+                <?php if (!empty($jogadoresNegativos)): ?>
+                    <div style="background: #ff4444; color: white; padding: 10px; border-radius: 8px; margin-top: 15px;">
+                        <strong>⚠️ ALERTA: Jogadores com saldo negativo:</strong>
+                        <ul>
+                            <?php foreach ($jogadoresNegativos as $jogador): ?>
+                                <li><?= htmlspecialchars($jogador) ?></li>
+                            <?php endforeach; ?>
+                        </ul>
+                    </div>
+                <?php endif; ?>
             </div>
         </form>
 

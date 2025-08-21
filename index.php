@@ -179,6 +179,7 @@ sort($players_list);
 $filtrarHistorico = isset($_POST['aplicar_filtro_historico']);
 $data_inicio_historico = isset($_POST['data_inicio_historico']) ? $_POST['data_inicio_historico'] : '';
 $data_fim_historico = isset($_POST['data_fim_historico']) ? $_POST['data_fim_historico'] : '';
+$filtro_jogador_historico = isset($_POST['filtro_jogador_historico']) ? trim($_POST['filtro_jogador_historico']) : '';
 
 // Reprocessar os dados originais
 $dadosFiltrados = $dadosSalvos;
@@ -186,7 +187,7 @@ $totalGeralDepositos = 0;
 $totalGeralSaques = 0;
 $totalGeralTotal = 0;
 
-if ($filtrarHistorico && ($data_inicio_historico || $data_fim_historico)) {
+if ($filtrarHistorico && ($data_inicio_historico || $data_fim_historico || $filtro_jogador_historico)) {
     // Dados brutos para filtrar por data
     $arquivoDadosBrutos = "dados_brutos.json";
     $dadosBrutos = [];
@@ -211,6 +212,11 @@ if ($filtrarHistorico && ($data_inicio_historico || $data_fim_historico)) {
                 continue;
 
             $jogador = $registro['jogador'];
+
+            // Aplicar filtro por jogador (se especificado)
+            if ($filtro_jogador_historico && stripos($jogador, $filtro_jogador_historico) === false)
+                continue;
+
             $motivo = $registro['motivo'];
             $quantidade = $registro['quantidade'];
 
@@ -586,6 +592,12 @@ file_put_contents($arquivoDadosBrutos, json_encode($dadosBrutosExistentes, JSON_
                         <input type="date" name="data_fim_historico"
                             value="<?= htmlspecialchars($data_fim_historico) ?>">
                     </div>
+                    <div>
+                        <label>Filtrar por Jogador</label>
+                        <input type="text" name="filtro_jogador_historico"
+                            value="<?= htmlspecialchars($filtro_jogador_historico) ?>"
+                            placeholder="Digite parte do nome..." style="width: 100%;">
+                    </div>
                     <div class="actions">
                         <button type="submit" name="aplicar_filtro_historico" value="1">Aplicar Filtro</button>
                         <?php if ($filtrarHistorico): ?>
@@ -598,8 +610,10 @@ file_put_contents($arquivoDadosBrutos, json_encode($dadosBrutosExistentes, JSON_
                     <div style="background: #2c2c2c; padding: 10px; border-radius: 8px; margin-bottom: 15px;">
                         <strong>Filtro aplicado:</strong>
                         <?php if ($data_inicio_historico): ?>De:
-                            <?= htmlspecialchars($data_inicio_historico) ?>     <?php endif; ?>
-                        <?php if ($data_fim_historico): ?>Até: <?= htmlspecialchars($data_fim_historico) ?><?php endif; ?>
+                            <?= htmlspecialchars($data_inicio_historico) ?>    <?php endif; ?>
+                        <?php if ($data_fim_historico): ?> Até: <?= htmlspecialchars($data_fim_historico) ?><?php endif; ?>
+                        <?php if ($filtro_jogador_historico): ?> | Jogador:
+                            <?= htmlspecialchars($filtro_jogador_historico) ?>    <?php endif; ?>
                     </div>
                 <?php endif; ?>
 

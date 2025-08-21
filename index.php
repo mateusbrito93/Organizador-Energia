@@ -260,6 +260,10 @@ if ($linhas_raw !== '' && isset($_POST['processar']) && !$processamentoConcluido
     // Salvar dados brutos para filtros futuros (apenas os não duplicados)
     file_put_contents($arquivoDadosBrutos, json_encode($dadosBrutosExistentes, JSON_PRETTY_PRINT));
 
+    // Armazenar a data/hora da última atualização REAL
+    $ultimaAtualizacao = time();
+    file_put_contents("ultima_atualizacao.txt", $ultimaAtualizacao);
+
     // Armazenar mensagens na sessão para redirecionamento
     $_SESSION['processamento_concluido'] = true;
     $_SESSION['logs_duplicados'] = $logsDuplicados;
@@ -370,6 +374,30 @@ if ($filtrarHistorico && ($data_inicio_historico || $data_fim_historico || $filt
 if (!empty($dadosFiltrados)) {
     ksort($dadosFiltrados); // Ordena pelo índice (nome do jogador) em ordem alfabética
 }
+
+// Obter data e hora da última atualização REAL
+$arquivoUltimaAtualizacao = "ultima_atualizacao.txt";
+if (file_exists($arquivoUltimaAtualizacao)) {
+    $timestampUltimaAtualizacao = file_get_contents($arquivoUltimaAtualizacao);
+    
+    // Usando DateTime para melhor controle de timezone
+    $datetime = new DateTime("@$timestampUltimaAtualizacao");
+    
+    // Horário Brasileiro
+    $datetime->setTimezone(new DateTimeZone('America/Sao_Paulo'));
+    $dataHoraBR = $datetime->format('d/m/Y H:i:s');
+    
+    // Horário UTC
+    $datetime->setTimezone(new DateTimeZone('UTC'));
+    $dataHoraUTC = $datetime->format('d/m/Y H:i:s');
+    
+} else {
+    $dataHoraBR = "Nunca atualizado";
+    $dataHoraUTC = "Nunca atualizado";
+}
+
+// Verificar se é um redirecionamento após processamento
+$processamentoConcluido = isset($_SESSION['processamento_concluido']) ? $_SESSION['processamento_concluido'] : false;
 
 // Limpar a sessão após uso (apenas se foi um redirecionamento)
 if ($processamentoConcluido) {
@@ -756,6 +784,14 @@ if ($processamentoConcluido) {
         <form method="post">
             <div class="panel">
                 <h3>Histórico Completo (todos os dados salvos)</h3>
+
+                <!-- Aviso de última atualização -->
+                <div
+                    style="background: #2c2c2c; padding: 10px; border-radius: 8px; margin-bottom: 15px; border-left: 4px solid #0078d7;">
+                    <strong>🕐 Última atualização:</strong><br>
+                    • Horário Brasileiro: <?= $dataHoraBR ?><br>
+                    • Horário Albion Online: <?= $dataHoraUTC ?>
+                </div>
 
                 <!-- Filtros para o histórico -->
                 <div class="panel grid"
